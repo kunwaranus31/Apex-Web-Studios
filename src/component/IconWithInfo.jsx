@@ -2,16 +2,31 @@ import { Box, Typography } from '@mui/material'
 import React from 'react'
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-
-
 const IconWithInfo = ({
   textImage,
   heading,
   info,
   infoWidth,
   imageWidth,
-  link
+  link,
+  textClr,
+  fontsize,
+  hover = true,          // NEW: toggle hover effect (default ON)
 }) => {
+  // Build hover styles only when enabled
+  const hoverStyles = hover
+    ? {
+        "&:hover": {
+          border: "solid",
+          borderWidth: "2px",
+          borderColor: "#7444FD",
+          backgroundColor: "#FAF8FF",
+          p: 2,
+          borderRadius: 6,
+        },
+      }
+    : {};
+
   return (
     <Box
       sx={{
@@ -24,23 +39,11 @@ const IconWithInfo = ({
         borderRadius: 6,
         borderColor: "rgba(255, 255, 255, 0)",
         alignItems: "flex-start",
-
-        "&:hover": {
-          border: "solid",
-          borderWidth: "2px",
-          borderColor: "#7444FD",
-          backgroundColor: "#FAF8FF",
-          p: 2,
-          borderRadius: 6
-        }
+        ...hoverStyles,   // <- conditionally applied
       }}
     >
       {/* Icon */}
-      <Box
-        component="img"
-        src={textImage}
-        sx={{ width: imageWidth || "60px" }}
-      />
+      <Box component="img" src={textImage} sx={{ width: imageWidth || "60px" }} />
 
       {/* Text content */}
       <Box>
@@ -50,21 +53,24 @@ const IconWithInfo = ({
         >
           {heading}
         </Typography>
+
         <Typography
           variant="body1"
           sx={{
-            color: "#858585",
+            color: textClr || "#858585",
             display: "block",
+            fontSize: fontsize || "16px",
             width: {
-              xs: "100%", // full width on mobile
+              xs: "100%",
               sm: "90%",
-              md: infoWidth || "260px", // use prop or fallback
+              md: infoWidth || "260px",
             },
           }}
         >
           {info}
         </Typography>
-        {link &&
+
+        {link && (
           <Typography
             component="a"
             href={link}
@@ -75,14 +81,15 @@ const IconWithInfo = ({
               alignItems: "center",
               cursor: "pointer",
               display: "inline-flex",
-            }} >
+            }}
+          >
             Read More
-            {<ArrowForwardIcon sx={{ width: 15, ml: 1, height: 1 }} />}
+            <ArrowForwardIcon sx={{ width: 15, ml: 1, height: 1 }} />
           </Typography>
-        }
+        )}
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default IconWithInfo
+export default IconWithInfo;

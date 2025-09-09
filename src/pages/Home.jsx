@@ -372,18 +372,21 @@ const Home = () => {
                             heading="Software Development"
                             info="Custom enterprise solutions, legacy modernization, system integration."
                             infoWidth="250px"
+                            hover={false}
                         />
                         <IconWithInfo
                             textImage={webIcon}
                             heading="Web Development"
                             info="Responsive websites, progressive web apps development."
                             infoWidth="250px"
+                            hover={false}
                         />
                         <IconWithInfo
                             textImage={dataIcon}
                             heading="Big Data Development"
                             info="Handle Data pipelines, analytics dashboards."
                             infoWidth="220px"
+                            hover={false}
                         />
                     </Box>
 
@@ -404,18 +407,21 @@ const Home = () => {
                             heading="Mobile app Development"
                             info="Responsive mobile app, iOS/Android app development."
                             infoWidth="260px"
+                            hover={false}
                         />
                         <IconWithInfo
                             textImage={aiIcon}
                             heading="AI Development"
                             info="Build smarter systems, automation, powered by custom AI solutions."
                             infoWidth="250px"
+                            hover={false}
                         />
                         <IconWithInfo
                             textImage={devopsIcon}
                             heading="DevOps"
                             info="We design and manage robust cloud environments that grow your business."
                             infoWidth="270px"
+                            hover={false}
                         />
                     </Box>
                 </Box>

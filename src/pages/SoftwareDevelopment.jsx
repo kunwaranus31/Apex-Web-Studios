@@ -19,6 +19,13 @@ import mobile from '../assets/service/serviceInnerPages/service-software-mobile.
 import HeadingWithSubheading from '../component/HeadingWithSubheading'
 import IconWithInfo from '../component/IconWithInfo'
 import approachBg from '../assets/service/serviceBg.jpg'
+import appoachImg from '../assets/service/serviceInnerPages/service-software-app-bg.png'
+import discover from '../assets/service/serviceInnerPages/service-software-discover.png'
+import build from '../assets/service/serviceInnerPages/service-software-build.png'
+import deploy from '../assets/service/serviceInnerPages/service-software-deploy.png'
+import validate from '../assets/service/serviceInnerPages/service-software-validate.png'
+import improve from '../assets/service/serviceInnerPages/service-software-improve.png'
+import design from '../assets/service/serviceInnerPages/service-software-design.png'
 
 
 
@@ -210,6 +217,85 @@ const SoftwareDevelopment = () => {
                     heading="Our Approach"
                     align="center"
                 />
+
+                <FlexBox sx={{
+                    py:4,
+                    justifyContent:"space-between",
+                    gap:2,
+
+                }}>
+                    <Box>
+                        <IconWithInfo
+                        heading="Discover"
+                        info="Goals, stakeholders and existing systems."
+                        infoWidth="320px"
+                        textImage={discover}
+                        imageWidth="55px"
+                        textClr = "#000"
+                        fontsize="14px"
+                        hover={false}
+                    />
+                    <IconWithInfo
+                        heading="Build"
+                        info="Iterative sprints, automated tests and regular demos."
+                        infoWidth="330px"
+                        textImage={build}
+                        imageWidth="55px"
+                        textClr = "#000"
+                        fontsize="14px"
+                        hover={false}
+                    />
+                    <IconWithInfo
+                        heading="Deploy & Operate"
+                        info="CI/CD, monitoring and runbooks for reliability."
+                        infoWidth="320px"
+                        textImage={deploy}
+                        imageWidth="55px"
+                        textClr = "#000"
+                        fontsize="14px"
+                        hover={false}
+                    />
+                    </Box>
+                    <Box 
+                    component="img" 
+                    src={appoachImg}
+                    sx={{
+                        width:"350px"
+                    }}
+                    />
+                    <Box>
+                        <IconWithInfo
+                        heading="Design"
+                        info="Architecture, APIs, data flows and security posture."
+                        infoWidth="320px"
+                        textImage={design}
+                        imageWidth="55px"
+                        textClr = "#000"
+                        fontsize="14px"
+                        hover={false}
+                    />
+                    <IconWithInfo
+                        heading="Validate"
+                        info="Performance, security and user acceptance testing."
+                        infoWidth="320px"
+                        textImage={validate}
+                        imageWidth="55px"
+                        textClr = "#000"
+                        fontsize="14px"
+                        hover={false}
+                    />
+                    <IconWithInfo
+                        heading="Improve"
+                        info="Metrics-driven enhancements to reduce cost and friction."
+                        infoWidth="350px"
+                        textImage={improve}
+                        imageWidth="55px"
+                        textClr = "#000"
+                        fontsize="14px"
+                        hover={false}
+                    />
+                    </Box>
+                </FlexBox>
 
             </BoxBg>
 
