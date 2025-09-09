@@ -4,7 +4,14 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 
 
-const IconWithInfo = ({ textImage, heading, info, infoWidth, imageWidth, link }) => {
+const IconWithInfo = ({
+  textImage,
+  heading,
+  info,
+  infoWidth,
+  imageWidth,
+  link
+}) => {
   return (
     <Box
       sx={{
@@ -12,12 +19,12 @@ const IconWithInfo = ({ textImage, heading, info, infoWidth, imageWidth, link })
         gap: 2,
         mb: 3,
         p: 2,
-        border:"solid",
+        border: "solid",
         borderWidth: "2px",
         borderRadius: 6,
         borderColor: "rgba(255, 255, 255, 0)",
         alignItems: "flex-start",
-        
+
         "&:hover": {
           border: "solid",
           borderWidth: "2px",

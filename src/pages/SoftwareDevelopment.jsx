@@ -18,6 +18,7 @@ import sre from '../assets/service/serviceInnerPages/service-software-sre.png'
 import mobile from '../assets/service/serviceInnerPages/service-software-mobile.png'
 import HeadingWithSubheading from '../component/HeadingWithSubheading'
 import IconWithInfo from '../component/IconWithInfo'
+import approachBg from '../assets/service/serviceBg.jpg'
 
 
 
@@ -140,7 +141,7 @@ const SoftwareDevelopment = () => {
                     heading="What We Offer"
                     align="center"
                 />
-                
+
                 <FlexBox sx={{
                     justifyContent: "center",
                     pt: 4,
@@ -152,7 +153,7 @@ const SoftwareDevelopment = () => {
                         infoWidth="325px"
                         textImage={api}
                         imageWidth="55px"
-                        
+
                     />
                     <IconWithInfo
                         heading="Data Engineering & Streaming"
@@ -197,6 +198,20 @@ const SoftwareDevelopment = () => {
                     />
                 </FlexBox>
             </Box>
+
+            <BoxBg
+                bgImage={approachBg}
+                sx={{
+                    py: 5
+                }}
+            >
+                <HeadingWithSubheading
+                    subheading="LodaTech Approach"
+                    heading="Our Approach"
+                    align="center"
+                />
+
+            </BoxBg>
 
         </Box>
     )
