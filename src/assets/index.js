@@ -53,7 +53,7 @@ export { default as service } from './service/serviceBg.jpg';
 export { default as service2 } from './service/service-sec2.webp';
 export { default as software } from './service/service-software.png';
 export { default as devops } from './service/service-devops.png';
-export { default as bigdata } from './service/service-bigdata.png';
+export { default as bigdata } from './service/service-bigData.png';
 export { default as ml } from './service/service-ML.png';
 export { default as web } from './service/service-web.png';
 export { default as mobile } from './service/service-mobile.png';
