@@ -1,36 +1,43 @@
 import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
-import InnerPageHeader from '../component/InnerPageHeader'
-import InnerPageTextImage from '../component/InnerPageTextImage'
-import aboutUs1 from "../assets/aboutus1.png";
-import aboutUs2 from "../assets/aboutus2.png";
-import aboutsec3 from "../assets/aboutsecSection.png";
-import BoxBg from '../component/BoxBg';
-import FlexBox from '../component/FlexBox';
-import HeadingWithSubheading from '../component/HeadingWithSubheading';
-import IconWithInfo from '../component/IconWithInfo';
-import mission from "../assets/about-mission.png";
-import vision from "../assets/about-vision.png";
-import polish from "../assets/about-polish.png";
-import ownership from "../assets/about-ownership.png";
-import clarity from "../assets/about-clarity.png";
-import security from "../assets/about-security.png";
-import improv from "../assets/about-improv.png";
-import engineer from "../assets/about-engineer.png";
-import Team from '../component/Team';
-import fabrice from "../assets/team/team-fabrice.png";
-import senior from "../assets/team/team-senior.png";
-import product from "../assets/team/team-product.png";
-import data from "../assets/team/team-data.png";
-import deliver from "../assets/about-deliver.png";
-import pipeline from "../assets/about-pipeline.png";
-import cloud from "../assets/about-cloud.png";
-import fact from "../assets/about-fact.png";
-import formBg from "../assets/testimonialbg.webp";
-import fact2 from "../assets/about-fact2.webp";
-import HeadingInfo from '../component/HeadingInfo';
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import AboutForm from '../component/AboutForm';
+
+import {
+aboutUs1,
+aboutUs2,
+aboutsec3,
+mission,
+vision,
+polish,
+ownership,
+clarity,
+security,
+improv,
+engineer,
+fabrice,
+senior,
+product,
+data,
+deliver,
+pipeline,
+cloud,
+fact,
+formBg,
+fact2
+} from "../assets";
+
+import {
+InnerPageHeader,
+InnerPageTextImage,
+BoxBg,
+FlexBox,
+HeadingWithSubheading,
+IconWithInfo,
+Team,
+HeadingInfo,
+AboutForm,
+
+} from '../component';
 
 
 const AboutUs = () => {
@@ -168,6 +175,7 @@ const AboutUs = () => {
 
       <Box sx={{
         py: 5
+        
       }} >
         <HeadingWithSubheading
           heading="Meet the team"
@@ -179,7 +187,8 @@ const AboutUs = () => {
           Cross-functional engineers, data practitioners and product thinkers who collaborate closely with your teams. We combine deep technical craft with business context to deliver solutions that matter.
         </Typography>
         <FlexBox sx={{
-          gap: 2
+          gap: 2,
+          justifyContent:"center",
         }} >
           <Team
             teamImg={fabrice}

@@ -13,6 +13,7 @@ const BoxBg = ({ children, bgImage, sx, ...props }) => {
         overflow: "hidden",
         borderRadius: 6,
         margin: "0 auto",
+        py:4,
         ...sx, // allow extra styles
       }}
       {...props}

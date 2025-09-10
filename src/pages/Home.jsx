@@ -1,45 +1,50 @@
 import React, { useEffect, useState } from "react";
 import { Box, Button, Typography } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import fireIcon from "../assets/fire-icon.png";
-import clientReview from "../assets/client-review.png";
-import rating from "../assets/rating.png";
-import bannerImg1 from "../assets/banner-img-1.png";
-import bannerImg2 from "../assets/banner-img-2.png";
-import bannerImg3 from "../assets/banner-img-3.png";
-import bannerbg from "../assets/banner-bg-img.png";
-import LogoSlider from "../component/LogoSlider";
-import ImageText from "../component/ImageText";
-import secBanner from "../assets/secbanner.png";
-import HeadingWithSubheading from "../component/HeadingWithSubheading";
-import ValueSection from "../component/ValueSection";
-import circleLine from "../assets/linewithcircle.png";
-import phone1 from "../assets/phoneimage1.png";
-import phone2 from "../assets/phoneimage2.png";
-import ImageText2 from "../component/ImageText2.jsx";
-import IconWithInfo from "../component/IconWithInfo.jsx";
-import softwareIcon from "../assets/software.png";
-import webIcon from "../assets/web.png";
-import dataIcon from "../assets/data.png";
-import mobileIcon from "../assets/mobile.png";
-import aiIcon from "../assets/ai.png";
-import devopsIcon from "../assets/devops.png";
-import phones from "../assets/twophones.png";
-import NumberWithText from "../component/NumberWithText.jsx";
-import numbersBg from "../assets/numbersbg.png";
-import AccordionFaq from "../component/AccordionFaq.jsx";
-import faqImage from "../assets/faqimage.jpg";
-import testimonialBg from "../assets/testimonialbg.webp";
-import Testimonial from "../component/Testimonial.jsx";
-import client1 from "../assets/thumb.png";
-import Consultation from "../assets/consultation.png";
-import IconTextWhite from "../component/IconTextWhite.jsx";
-import phonesImg from "../assets/phones.png";
-import HomeForm from "../component/HomeForm.jsx";
-import Blog from "../component/Blog.jsx";
-import blogImg1 from "../assets/blog1.png";
-import blogImg2 from "../assets/blog2.png";
 
+import {
+fireIcon,
+clientReview,
+rating,
+bannerImg1,
+bannerImg2,
+bannerImg3,
+bannerbg,
+secBanner,
+circleLine,
+phone1,
+phone2,
+softwareIcon,
+webIcon,
+dataIcon,
+mobileIcon,
+aiIcon,
+devopsIcon,
+phones,
+numbersBg,
+faqImage,
+testimonialBg,
+client1,
+Consultation,
+phonesImg,
+blogImg1,
+blogImg2
+} from '../assets';
+
+import {
+Testimonial,
+AccordionFaq,
+NumberWithText,
+ImageText2,
+IconWithInfo,
+LogoSlider,
+ValueSection,
+HeadingWithSubheading,
+ImageText,
+IconTextWhite,
+HomeForm,
+Blog
+} from '../component';
 
 const Home = () => {
 
@@ -63,7 +68,7 @@ const Home = () => {
                     mx: "auto",
                     px: { xs: 2, sm: 3, md: 6, lg: "90px" },
                     pt: 10,
-                    
+
                     display: "flex",
                     flexDirection: { xs: "column", md: "row" }, // stack on mobile
                     alignItems: "center",
@@ -261,12 +266,13 @@ const Home = () => {
 
 
             </Box>
-            <Box conponent="section" sx={{ py: 4, 
-                alignItems:"center",
-                maxWidth:"1800px",
-                justifyContent:"cneter",
-                textAlign:"cenetr",
-                mx:"auto"
+            <Box conponent="section" sx={{
+                py: 4,
+                alignItems: "center",
+                maxWidth: "1800px",
+                justifyContent: "cneter",
+                textAlign: "cenetr",
+                mx: "auto"
             }} >
                 <Box sx={{ textAlign: "center" }} ><Typography variant="h3" >Millions of Clients Trust Us.</Typography></Box>
                 <LogoSlider />
@@ -491,7 +497,28 @@ const Home = () => {
                     </Box>
 
                     <Box sx={{ width: "100%" }}>
-                        <AccordionFaq />
+                        <AccordionFaq
+                            items={[
+                                {
+                                    question: 'Can you integrate with our existing systems?',
+                                    answer:
+                                        'We primarily serve banking, insurance, aerospace, and education—but our solutions adapt to any sector in need of custom software and data-driven innovation.',
+                                },
+                                {
+                                    question: 'What industries do you specialize in?',
+                                    answer:
+                                        'We primarily serve banking, insurance, aerospace, and education—but our solutions adapt to any sector in need of custom software and data-driven innovation.',
+                                },
+                                {
+                                    question: 'Do you provide end-to-end development?',
+                                    answer:
+                                        'We primarily serve banking, insurance, aerospace, and education—but our solutions adapt to any sector in need of custom software and data-driven innovation.',
+                                },
+                            ]}
+                            defaultExpandedIndex={0} // first open (this is the default)
+                        
+                        />
+                        
                     </Box>
                 </Box>
 

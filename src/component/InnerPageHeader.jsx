@@ -73,7 +73,7 @@ const InnerPageHeader = ({ heading, crumbs = [] }) => {
             <>
               <Link
                 underline='none'
-                href="/home/"
+                href="/"
                 sx={linkSx}
               >
                 Home

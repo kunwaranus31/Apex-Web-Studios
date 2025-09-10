@@ -5,83 +5,62 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-export default function AccordionFaq() {
+export default function AccordionFaq({
+  items = [],
+  defaultExpandedIndex = 0, // first open by default
+  exclusive = false,        // set true to allow only one open at a time
+}) {
+  const [expandedIndex, setExpandedIndex] = React.useState(
+    exclusive ? defaultExpandedIndex : -1
+  );
+
   return (
     <div>
-      <Accordion defaultExpanded sx={{
-        mb:2,
-        backgroundColor: '#FAF8FF',
-        borderRadius: "10px",
-        '& .MuiAccordionSummary-root': {
-          borderTopLeftRadius: '10px',
-          borderTopRightRadius: '10px',
-        },
-        '& .MuiAccordionDetails-root': {
-          borderBottomLeftRadius: '10px',
-          borderBottomRightRadius: '10px',
-        }
-      }}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1-content"
-          id="panel1-header"
-        >
-          <Typography component="span" sx={{fontWeight:600}} >Can you integrate with our existing systems?</Typography>
-        </AccordionSummary>
-        <AccordionDetails sx={{color:"#858585"}} >
-          We primarily serve banking, insurance, aerospace, and education—but our solutions adapt to any sector in need of custom software and data-driven innovation.
-        </AccordionDetails>
-      </Accordion>
-      
-      <Accordion sx={{
-        mb:2,
-        backgroundColor: '#FAF8FF',
-        borderRadius: '10px',
-        '& .MuiAccordionSummary-root': {
-          borderTopLeftRadius: '10px',
-          borderTopRightRadius: '10px',
-        },
-        '& .MuiAccordionDetails-root': {
-          borderBottomLeftRadius: '10px',
-          borderBottomRightRadius: '10px',
-        }
-      }}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2-content"
-          id="panel2-header"
-        >
-          <Typography component="span" sx={{fontWeight:600}} >What industries do you specialize in?</Typography>
-        </AccordionSummary>
-        <AccordionDetails sx={{color:"#858585"}} >
-          We primarily serve banking, insurance, aerospace, and education—but our solutions adapt to any sector in need of custom software and data-driven innovation.
-        </AccordionDetails >
-      </Accordion>
+      {items.map((item, i) => {
+        const id = `panel${i}`;
+        const isControlled = exclusive;
+        const controlledExpanded = isControlled ? expandedIndex === i : undefined;
+        const uncontrolledDefault = !isControlled && i === defaultExpandedIndex;
 
-      <Accordion  sx={{
-        mb:2,
-        backgroundColor: '#FAF8FF',
-        borderRadius: '10px',
-        '& .MuiAccordionSummary-root': {
-          borderTopLeftRadius: '10px',
-          borderTopRightRadius: '10px',
-        },
-        '& .MuiAccordionDetails-root': {
-          borderBottomLeftRadius: '10px',
-          borderBottomRightRadius: '10px',
-        }
-      }}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3-content"
-          id="panel3-header"
-        >
-          <Typography component="span" sx={{fontWeight:600}} >Do you provide end-to-end development?</Typography>
-        </AccordionSummary>
-        <AccordionDetails sx={{color:"#858585"}} >
-          We primarily serve banking, insurance, aerospace, and education—but our solutions adapt to any sector in need of custom software and data-driven innovation.
-        </AccordionDetails>
-      </Accordion>
+        return (
+          <Accordion
+            key={id}
+            expanded={isControlled ? controlledExpanded : undefined}
+            onChange={
+              isControlled
+                ? (_e, isExp) => setExpandedIndex(isExp ? i : -1)
+                : undefined
+            }
+            defaultExpanded={uncontrolledDefault}
+            sx={{
+              mb: 2,
+              backgroundColor: '#FAF8FF',
+              borderRadius: '10px',
+              '& .MuiAccordionSummary-root': {
+                borderTopLeftRadius: '10px',
+                borderTopRightRadius: '10px',
+              },
+              '& .MuiAccordionDetails-root': {
+                borderBottomLeftRadius: '10px',
+                borderBottomRightRadius: '10px',
+              },
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls={`${id}-content`}
+              id={`${id}-header`}
+            >
+              <Typography component="span" sx={{ fontWeight: 600 }}>
+                {item.question}
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails sx={{ color: '#858585' }}>
+              {item.answer}
+            </AccordionDetails>
+          </Accordion>
+        );
+      })}
     </div>
   );
 }

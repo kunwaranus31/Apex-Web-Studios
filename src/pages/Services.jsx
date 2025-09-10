@@ -1,27 +1,47 @@
 import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
-import InnerPageHeader from '../component/InnerPageHeader'
-import BoxBg from '../component/BoxBg'
-import service from '../assets/service/serviceBg.jpg'
-import service2 from '../assets/service/service-sec2.webp'
-import FlexBox from '../component/FlexBox'
-import HeadingWithSubheading from '../component/HeadingWithSubheading'
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import IconWithInfo from '../component/IconWithInfo'
-import software from '../assets/service/service-software.png'
-import devops from '../assets/service/service-devops.png'
-import bigdata from '../assets/service/service-bigData.png'
-import ml from '../assets/service/service-ML.png'
-import web from '../assets/service/service-web.png'
-import mobile from '../assets/service/service-mobile.png'
-import partner from '../assets/service/service-partner-bg.jpg'
-import ValueSection from '../component/ValueSection'
-import HeadingInfo from '../component/HeadingInfo'
-import why from '../assets/service/service-why.png'
-import enterprise from '../assets/service/service-enterprise.png'
-import cloud from '../assets/service/service-cloud.png'
-import ctaBg from '../assets/service/service-ctaBg.png'
 
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+// import service2 from '../assets/service/service-sec2.webp'
+
+// import devops from '../assets/service/service-devops.png'
+// import bigdata from '../assets/service/service-bigData.png'
+// import ml from '../assets/service/service-ML.png'
+// import web from '../assets/service/service-web.png'
+// import mobile from '../assets/service/service-mobile.png'
+// import partner from '../assets/service/service-partner-bg.jpg'
+
+// import why from '../assets/service/service-why.png'
+// import enterprise from '../assets/service/service-enterprise.png'
+// import cloud from '../assets/service/service-cloud.png'
+// import ctaBg from '../assets/service/service-ctaBg.png'
+
+import {
+service,
+service2,
+software,
+devops,
+ml,
+web,
+mobile,
+partner,
+bigdata,
+why,
+enterprise,
+serviceCloud,
+ctaBg,
+} from '../assets/'; 
+
+import {
+InnerPageHeader,
+BoxBg,
+FlexBox,
+HeadingWithSubheading,
+IconWithInfo,
+ValueSection,
+HeadingInfo,
+
+} from '../component'
 
 const Services = () => {
     return (
@@ -313,7 +333,7 @@ const Services = () => {
                     <Box sx={{ mt: 3 }}>
                         <Box
                             component="img"
-                            src={cloud}
+                            src={serviceCloud}
                             sx={{ width: "60px", mb: 1 }}
                         />
                         <Typography variant="h3">Cloud replatform</Typography>
