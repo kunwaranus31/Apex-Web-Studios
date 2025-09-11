@@ -1,74 +1,32 @@
-import { Box, Divider, Typography, Button } from '@mui/material'
 import React from 'react'
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-
 import approachBg from '../assets/service/serviceBg.jpg'
-import faqImage from "../assets/faqimage.jpg";
 import formBg from "../assets/testimonialbg.webp";
 
-import {
-    InnerPageHeader,
-    FlexBox,
-    TextWithBorder,
-    BoxBg,
-    InnerPageTextImage,
-    HeadingWithSubheading,
-    IconWithInfo,
-    AccordionFaq,
-    AboutForm
-} from '../component';
 
-import {
-    firstImg,
-    secondBg,
-    whyChoose,
-    api,
-    data,
-    cloud,
-    migration,
-    sre,
-    mobile,
-    appoachImg,
-    discover,
-    build,
-    deploy,
-    validate,
-    improve,
-    design,
-    result1,
-    result2,
-    techBg,
-    s1,
-    s2,
-    s3,
-    s4,
-    s5,
-    s6,
-    s7,
-    s9,
-    s10,
-    s11,
-    s12,
-    s13,
-    s8,
-} from '../assets/service/serviceInnerPages';
+import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage, TextWithBorder } from "../component"
 
+import { s9, secondBg, techBg, webAlly, webApi, webBuild, webCF, webCms, webCmsIcon, webCss, webDesign, webDiscovery, webFAQ, webFirst, webFrontend, webGraph, webHtml, webJava, webJest, webJs, webLaunch, webMeasure, webNetlify, webNext, webOptimize, webOutcome1, webOutcome2, webPerformance, webProduct, webProjectImg, webPW, webShopify, webT, webTs, webV, webVercel, webWebops, webWhychoose } from '../assets/service/serviceInnerPages'
 
-const SoftwareDevelopment = () => {
+import { Box, Button, Divider, Typography } from '@mui/material'
+
+const WebDevelopment = () => {
     return (
         <Box>
-            <InnerPageHeader heading="Software Development" crumbs={[
+            <InnerPageHeader heading="Web Development" crumbs={[
                 { label: "Home", to: "/" },
-                { label: "Services", to: "/services" },
-                { label: "Software Development" }
+                { label: "Service", to: "/service" },
+                { label: "Web Development" },
             ]} />
+
+
             <FlexBox sx={{
                 display: "block",
                 py: 5
-                }} >
+            }} >
                 <Box
                     component="img"
-                    src={firstImg}
+                    src={webFirst}
                     sx={{
                         width: "100%",
                         my: 2
@@ -77,20 +35,19 @@ const SoftwareDevelopment = () => {
                 <Typography variant='h1' sx={{
                     mb: 2
                 }} >
-                    Software Development
+                    Web Development
                 </Typography>
                 <Box>
                     <TextWithBorder items={[
-                        { text: "Custom Applications & APIs" },
-                        { text: "Data Engineering & Streaming" },
-                        { text: "Cloud-Native Modernization" },
-                        { text: "Legacy Migration & Integration" },
-                        { text: "DevOps & SRE" },
-                        { text: "Frontend & Mobile" },
+                        { text: "Design" },
+                        { text: "Frontend Engineering" },
+                        { text: "Performance" },
+                        { text: "Accessibility" },
+                        { text: "WebOps" },
                     ]} />
                 </Box>
                 <Typography sx={{ my: 2 }} >
-                    Complexity, simplified — practical software and data engineering that delivers measurable results.
+                    Complexity, simplified — we design and build web experiences that are fast, accessible, and built to scale.
                 </Typography>
                 <FlexBox sx={{ gap: 1, pt: 3, px: 0, mb: 3, alignItems: { xs: "flex-start" } }}>
                     <Button
@@ -130,16 +87,15 @@ const SoftwareDevelopment = () => {
                             mb: 1
                         }}
                     >
-                        Service Overview
+                        Overview
                     </Typography>
                     <Typography
                         variant='body'
                     >
-                        We build reliable software systems and data pipelines that teams actually use. From greenfield product development to legacy modernization and real-time data engineering, Lodatech turns complex challenges into simple, maintainable solutions so your teams can move faster and focus on outcomes.
+                        We create websites and web applications that balance user experience, accessibility and long-term maintainability. Whether you need a marketing site that converts, a headless CMS storefront, or a single-page app with complex business logic, our team builds solutions that perform and adapt as your business grows.
                     </Typography>
                 </Box>
             </FlexBox>
-
             <BoxBg
                 bgImage={secondBg}
                 sx={{
@@ -148,17 +104,16 @@ const SoftwareDevelopment = () => {
 
                 <InnerPageTextImage
                     subheading="Why Choose Lodatech"
-                    heading="Why choose Lodatech"
-                    paragraph="A predictable, outcome-driven approach that reduces uncertainty and delivers early value."
-                    image={whyChoose}
+                    heading="Why Lodatech for web"
+                    image={webWhychoose}
                     imageWidth='500px'
                     contentjustify="space-between"
                     items={[
-                        { iconHeading: "We simplify complexity.", iconDetail: "Clear design and pragmatic engineering reduce technical debt." },
-                        { iconHeading: "Domain-aware engineering.", iconDetail: "We combine software craft with business context to drive outcomes." },
-                        { iconHeading: "Fast, measurable wins.", iconDetail: "Short iterations deliver visible progress and reduce time-to-value." },
-                        { iconHeading: "End-to-end ownership.", iconDetail: "Design, delivery and production support — we stay accountable." },
-                        { iconHeading: "Security & compliance first.", iconDetail: "Secure defaults and testing are part of our process." },
+                        { iconHeading: "Practical design.", iconDetail: "We deliver interfaces that increase engagement and lower support burden." },
+                        { iconHeading: "Built for scale.", iconDetail: "Engineering patterns that stay maintainable as features grow." },
+                        { iconHeading: "Conversion-focused.", iconDetail: "UX + performance tuned to improve lead generation and sales." },
+                        { iconHeading: "Accessibility-first.", iconDetail: "Compliance and inclusive design baked into every project." },
+                        { iconHeading: "Production-ready operations.", iconDetail: "From CI to monitoring and runbooks — we operate what we build." },
                     ]}
                     rowDirection="row-reverse"
                 />
@@ -169,7 +124,7 @@ const SoftwareDevelopment = () => {
             }}>
                 <HeadingWithSubheading
                     subheading="LodaTech Offer"
-                    heading="What We Offer"
+                    heading="What we do"
                     align="center"
                 />
 
@@ -179,26 +134,29 @@ const SoftwareDevelopment = () => {
                     gap: 2
                 }}>
                     <IconWithInfo
-                        heading="Custom Applications & APIs"
-                        info="Web applications, backend services and APIs designed for scale, security and maintainability."
+                        heading="Product & UX Design"
+                        info="User research, wireframes, prototyping and design systems to ensure accessible, conversion-focused experiences."
                         infoWidth="325px"
-                        textImage={api}
+                        textImage={webProduct}
                         imageWidth="55px"
+                        textClr="#000"
 
                     />
                     <IconWithInfo
-                        heading="Data Engineering & Streaming"
-                        info="Real-time pipelines, ETL/ELT, Kafka & Spark solutions to make data available where and when it's needed."
+                        heading="Frontend Engineering"
+                        info="Modern frontend stacks (React, Next.js, TypeScript, Vue) with component-driven architecture and automated testing."
                         infoWidth="325px"
-                        textImage={data}
+                        textImage={webFrontend}
                         imageWidth="55px"
+                        textClr="#000"
                     />
                     <IconWithInfo
-                        heading="Cloud-Native Modernization"
-                        info="Containerization, Kubernetes (GKE), CI/CD and infrastructure-as-code to make deployments predictable and repeatable."
+                        heading="Performance & SEO"
+                        info="Server-side rendering, code-splitting, critical CSS, and performance budgets to improve load times and search rankings."
                         infoWidth="315px"
-                        textImage={cloud}
+                        textImage={webPerformance}
                         imageWidth="55px"
+                        textClr="#000"
                     />
                 </FlexBox>
                 <FlexBox sx={{
@@ -207,25 +165,28 @@ const SoftwareDevelopment = () => {
                     gap: 2
                 }}>
                     <IconWithInfo
-                        heading="Legacy Migration & Integration"
-                        info="Lift-and-refactor strategies, secure data migrations and integrations that minimize downtime and risk."
+                        heading="Accessibility (A11y)"
+                        info="WCAG-compliant patterns, keyboard-first interactions and assistive technology testing to make your site usable by everyone."
                         infoWidth="325px"
-                        textImage={migration}
+                        textImage={webAlly}
                         imageWidth="55px"
+                        textClr="#000"
                     />
                     <IconWithInfo
-                        heading="DevOps & SRE"
-                        info="Observability, automated testing and runbooks so systems remain reliable in production."
+                        heading="E-commerce & Headless CMS"
+                        info="Headless commerce, CMS integrations (Contentful, Strapi, Sanity), and fast, conversion-optimized storefronts."
                         infoWidth="325px"
-                        textImage={sre}
+                        textImage={webCms}
                         imageWidth="55px"
+                        textClr="#000"
                     />
                     <IconWithInfo
-                        heading="Frontend & Mobile"
-                        info="Responsive web and mobile interfaces built with modern frameworks for a smooth user experience."
+                        heading="WebOps & Security"
+                        info="CI/CD, image optimization, caching, CDN strategy and security hardening to keep sites fast and safe in production."
                         infoWidth="320px"
-                        textImage={mobile}
+                        textImage={webWebops}
                         imageWidth="55px"
+                        textClr="#000"
                     />
                 </FlexBox>
             </Box>
@@ -238,42 +199,47 @@ const SoftwareDevelopment = () => {
             >
                 <HeadingWithSubheading
                     subheading="LodaTech Approach"
-                    heading="Our Approach"
+                    heading="Our process for web projects"
                     align="center"
                 />
+                <Typography
+                    textAlign="center"
+                >
+                    A practical, iterative approach designed to reduce risk and deliver value early.
+                </Typography>
 
                 <FlexBox sx={{
                     py: 4,
-                    justifyContent: "space-between",
-                    gap: 2,
+                    justifyContent: "center",
+                    gap: 0,
 
                 }}>
                     <Box>
                         <IconWithInfo
-                            heading="Discover"
-                            info="Goals, stakeholders and existing systems."
+                            heading="Discovery & goals"
+                            info="Convert metrics and stakeholders into measurable success criteria."
                             infoWidth="320px"
-                            textImage={discover}
+                            textImage={webDiscovery}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
                             hover={false}
                         />
                         <IconWithInfo
-                            heading="Build"
-                            info="Iterative sprints, automated tests and regular demos."
+                            heading="Design & prototype "
+                            info="Rapid prototypes and usability testing to validate assumptions."
                             infoWidth="330px"
-                            textImage={build}
+                            textImage={webDesign}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
                             hover={false}
                         />
                         <IconWithInfo
-                            heading="Deploy & Operate"
-                            info="CI/CD, monitoring and runbooks for reliability."
+                            heading="Build & test"
+                            info="Component-driven development, automated and accessibility tests."
                             infoWidth="320px"
-                            textImage={deploy}
+                            textImage={webBuild}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -282,37 +248,37 @@ const SoftwareDevelopment = () => {
                     </Box>
                     <Box
                         component="img"
-                        src={appoachImg}
+                        src={webProjectImg}
                         sx={{
-                            width: "350px"
+                            width: { xs: "100%", lg: "500px" }
                         }}
                     />
                     <Box>
                         <IconWithInfo
-                            heading="Design"
-                            info="Architecture, APIs, data flows and security posture."
+                            heading="Optimize"
+                            info="Performance tuning, SEO checks and conversion rate improvements."
                             infoWidth="320px"
-                            textImage={design}
+                            textImage={webOptimize}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
                             hover={false}
                         />
                         <IconWithInfo
-                            heading="Validate"
-                            info="Performance, security and user acceptance testing."
+                            heading="Launch & operate"
+                            info="CI/CD, monitoring, CDN, backups and security reviews."
                             infoWidth="320px"
-                            textImage={validate}
+                            textImage={webLaunch}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
                             hover={false}
                         />
                         <IconWithInfo
-                            heading="Improve"
-                            info="Metrics-driven enhancements to reduce cost and friction."
-                            infoWidth="350px"
-                            textImage={improve}
+                            heading="Measure & iterate"
+                            info="Analytics-driven improvements and A/B experiments."
+                            infoWidth="320px"
+                            textImage={webMeasure}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -328,7 +294,7 @@ const SoftwareDevelopment = () => {
                     mb: 3
                 }} >
                     <Typography textAlign="center" variant='h2' >
-                        Selected Results (Short)
+                        Selected Outcomes
                     </Typography>
 
                 </Box>
@@ -336,7 +302,7 @@ const SoftwareDevelopment = () => {
                     <Box>
                         <Box
                             component="img"
-                            src={result1}
+                            src={webOutcome1}
                             sx={{
                                 width: "100%"
                             }}
@@ -346,7 +312,7 @@ const SoftwareDevelopment = () => {
                             textAlign="center"
                             pt="5px"
                         >
-                            Pipeline Stabilization For A FinTech Client
+                            Marketing site redesign for SaaS
                         </Typography>
                         <Typography
                             variant='body'
@@ -359,13 +325,13 @@ const SoftwareDevelopment = () => {
                             justifySelf="center"
                             pt="10px"
                         >
-                            Reduced data processing lag by 85% and added end-to-end tracing to identify bottlenecks and improve reliability.
+                            Improved Core Web Vitals and conversion rate: 40% faster load times and a 22% lift in trial signups within 60 days.
                         </Typography>
                     </Box>
                     <Box>
                         <Box
                             component="img"
-                            src={result2}
+                            src={webOutcome2}
                             sx={{
                                 width: "100%"
                             }}
@@ -375,7 +341,7 @@ const SoftwareDevelopment = () => {
                             textAlign="center"
                             pt="5px"
                         >
-                            Cloud Replatform For A Legacy Application
+                            Headless storefront for retail brand
                         </Typography>
                         <Typography
                             variant='body'
@@ -389,7 +355,7 @@ const SoftwareDevelopment = () => {
                             justifySelf="center"
                             pt="10px"
                         >
-                            Migrated a monolith to microservices on GKE; deployment frequency increased 6× and mean time to recovery improved significantly.
+                            Launched headless commerce with a React storefront and CDN-backed assets — conversion increased and average page load fell below 1.5s.
                         </Typography>
                     </Box>
                 </FlexBox>
@@ -411,95 +377,89 @@ const SoftwareDevelopment = () => {
             <BoxBg
                 bgImage={techBg}
             >
-                <Typography variant='h2' textAlign="center" >
-                    Technologies We Commonly Use
+                <Typography variant='h2' textAlign="center" pb="15px" >
+                    Technologies & integrations
+                </Typography>
+                <Typography textAlign="center">
+                    We commonly use
                 </Typography>
                 <FlexBox sx={{
                     justifyContent: "center",
                     gap: 2,
                     py: 2
                 }}>
-                    <Box component="img" src={s1} sx={{ width: "90px" }} />
-                    <Box component="img" src={s2} sx={{ width: "90px" }} />
-                    <Box component="img" src={s3} sx={{ width: "90px" }} />
-                    <Box component="img" src={s4} sx={{ width: "90px" }} />
-                    <Box component="img" src={s5} sx={{ width: "90px" }} />
-                    <Box component="img" src={s6} sx={{ width: "90px" }} />
-                    <Box component="img" src={s7} sx={{ width: "90px" }} />
+                    <Box component="img" src={webHtml} sx={{ width: "90px" }} />
+                    <Box component="img" src={webCss} sx={{ width: "90px" }} />
+                    <Box component="img" src={webJs} sx={{ width: "90px" }} />
+                    <Box component="img" src={s9} sx={{ width: "90px" }} />
+                    <Box component="img" src={webNext} sx={{ width: "90px" }} />
+                    <Box component="img" src={webTs} sx={{ width: "90px" }} />
+                    <Box component="img" src={webV} sx={{ width: "90px" }} />
 
                 </FlexBox>
                 <FlexBox sx={{
                     justifyContent: "center",
                     gap: 2,
-                    py: 1
+                    py: 1,
+                    pb: 3
                 }}>
-                    <Box component="img" src={s8} sx={{ width: "90px" }} />
-                    <Box component="img" src={s9} sx={{ width: "90px" }} />
-                    <Box component="img" src={s10} sx={{ width: "90px" }} />
-                    <Box component="img" src={s11} sx={{ width: "90px" }} />
-                    <Box component="img" src={s12} sx={{ width: "90px" }} />
-                    <Box component="img" src={s13} sx={{ width: "90px" }} />
+                    <Box component="img" src={webT} sx={{ width: "90px" }} />
+                    <Box component="img" src={webJava} sx={{ width: "90px" }} />
+                    <Box component="img" src={webGraph} sx={{ width: "90px" }} />
+                    <Box component="img" src={webApi} sx={{ width: "90px" }} />
+                    <Box component="img" src={webCmsIcon} sx={{ width: "90px" }} />
+                </FlexBox>
+                <Typography variant='h2' textAlign="center" >
+                    Contentful, Sanity
+                </Typography>
+                <FlexBox sx={{
+                    justifyContent: "center",
+                    gap: 2,
+                    py: 3
+                }}>
+                    <Box component="img" src={webShopify} sx={{ width: "90px" }} />
+                    <Box component="img" src={webVercel} sx={{ width: "90px" }} />
+                    <Box component="img" src={webNetlify} sx={{ width: "90px" }} />
+                    <Box component="img" src={webCF} sx={{ width: "90px" }} />
+                    <Box component="img" src={webJest} sx={{ width: "90px" }} />
+                    <Box component="img" src={webPW} sx={{ width: "90px" }} />
                 </FlexBox>
             </BoxBg>
-
-            <Box
-                component="section"
-                sx={{
-                    display: "flex",
-                    py: { xs: 6, md: 10 },
-                    gap: 12,
-                    justifyContent: "center",
-                    alignItems: "center",
-                    flexDirection: { xs: "column-reverse", md: "row" },
-                    px: { xs: 2, md: 0 }, // add safe side padding on mobile only
-                }}
-            >
-
-
-
-                <Box sx={{ ml: { xs: 0, md: 23 }, width: "100%" }}>
-                    <Box>
-                        <HeadingWithSubheading
-                            align="left"
-                            subheading="LodaTech FAQs"
-                            heading="Frequently Asked Questions"
-                        />
-                    </Box>
-
-
-                    <Box sx={{ width: "100%", pt: 4 }}>
-                        <AccordionFaq
-                            items={[
-                                {
-                                    question: "How long does a typical project take?",
-                                    answer: "Timelines vary by scope. We recommend a 2–4 week discovery sprint to validate needs and produce a clear roadmap."
-                                },
-                                {
-                                    question: "Do you provide ongoing support?",
-                                    answer: "Timelines vary by scope. We recommend a 2–4 week discovery sprint to validate needs and produce a clear roadmap."
-                                },
-                                {
-                                    question: "Can you work with our existing team?",
-                                    answer: "Timelines vary by scope. We recommend a 2–4 week discovery sprint to validate needs and produce a clear roadmap."
-                                },
-                            ]}
-                        />
-                    </Box>
-                </Box>
-                <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
-                    <Box
-                        component="img"
-                        src={faqImage}
-                        sx={{
-                            width: { xs: "100%", md: "auto" },
-                            maxWidth: { xs: "100%", md: "100%" },
-                            height: "auto",
-                            display: "block",
-                            userSelect: "none",
-                        }}
+            <FlexBox sx={{
+                gap: { xs: 3, md: 17 },
+                py: 10
+            }} >
+                <Box sx={{
+                    width: { xs: "100%", md: "50%" }
+                }} >
+                    <HeadingWithSubheading
+                        subheading="LodaTech FAQs"
+                        heading="Frequently Asked Questions"
+                        align="left"
+                    />
+                    <AccordionFaq
+                        items={[
+                            {
+                                question: "How long does a website project take?", answer: "Depends on scope. Simple marketing sites can be delivered in 4–8 weeks; larger web apps and headless commerce projects typically take 3–6 months."
+                            },
+                            {
+                                question: "Do you handle content and SEO?", answer: "Depends on scope. Simple marketing sites can be delivered in 4–8 weeks; larger web apps and headless commerce projects typically take 3–6 months."
+                            },
+                            {
+                                question: "Can you make our site accessible?"
+                            },
+                        ]}
                     />
                 </Box>
-            </Box>
+                <Box>
+                    <Box
+                        component="img"
+                        src={webFAQ}
+                        width="100%"
+
+                    />
+                </Box>
+            </FlexBox>
             <BoxBg bgImage={formBg} sx={{ pt: 9, pb: 3, my: 7 }} >
                 <Box sx={{
                     maxWidth: 1200,
@@ -509,20 +469,22 @@ const SoftwareDevelopment = () => {
                 }}>
                     <HeadingWithSubheading
                         subheading="Contact Us"
-                        heading="Ready to simplify complexity?"
+                        heading="Ready to launch a better web experience?"
                         justify="center"
                         align="center"
+                        headingWidth="100%"
                     />
 
                     <Typography
-                        variant='body' >
-                        Book a free 30-minute discovery call — we’ll map quick wins and a pragmatic roadmap tailored to your priorities.
+                        variant='body' fontSize="14px" >
+                        Schedule a short consultation — we'll review goals, performance targets and propose a pragmatic plan.
                     </Typography>
                 </Box>
                 <AboutForm />
             </BoxBg>
         </Box>
+
     )
 }
 
-export default SoftwareDevelopment
+export default WebDevelopment

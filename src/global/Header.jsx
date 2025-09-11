@@ -33,7 +33,7 @@ const navItems = [
 // Services submenu items
 const servicesItems = [
   { name: "Software Development", link: "/software-development" },
-  { name: "Mobile App Development", link: "#" },
+  { name: "Web Development", link: "/web-development" },
   { name: "AI & Data Engineering", link: "#" },
   { name: "DevOps", link: "#" },
   { name: "Big Data Development", link: "#" },

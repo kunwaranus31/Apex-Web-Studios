@@ -32,6 +32,45 @@ import s11 from './software-11.png';
 import s12 from './software-12.png';
 import s13 from './software-13.png';
 
+export { default as webFirst } from './web-first-img.jpg';
+export { default as webWhychoose } from './web-whychoose.webp';
+export { default as webAlly } from './web-ally.png';
+export { default as webCms } from './web-cms.webp';
+export { default as webFrontend } from './web-frontend.png';
+export { default as webPerformance } from './web-performance.png';
+export { default as webProduct } from './web-product.png';
+export { default as webWebops } from './web-webops.webp';
+
+export { default as webDiscovery } from './web-discovery.png';
+export { default as webDesign } from './web-design.png';
+export { default as webBuild } from './web-build.png';
+export { default as webOptimize } from './web-optimize.png';
+export { default as webLaunch } from './web-launch.png';
+export { default as webMeasure } from './web-measure.png';
+export { default as webProjectImg } from './web-project-img.webp';
+export { default as webOutcome1 } from './web-outcome1.jpg';
+export { default as webOutcome2 } from './web-outcome2.jpg';
+
+export { default as webHtml } from './web-html.png';
+export { default as webCss } from './web-css.png';
+export { default as webJs } from './web-js.png';
+export { default as webNext } from './web-next.png';
+export { default as webTs } from './web-ts.png';
+export { default as webV } from './web-v.png';
+export { default as webT } from './web-t.png';
+export { default as webJava } from './web-java.png';
+export { default as webGraph } from './web-graph.png';
+export { default as webApi } from './web-api.png';
+export { default as webCmsIcon } from './web-cms.png';
+export { default as webShopify } from './web-shopify.png';
+export { default as webVercel } from './web-vercel.png';
+export { default as webNetlify } from './web-netlify.png';
+export { default as webCF } from './web-cf.png';
+export { default as webJest } from './web-jest.png';
+export { default as webPW } from './web-pw.png';
+export { default as webFAQ } from './web-faq.webp';
+
+
 export {
   firstImg,
   secondBg,
