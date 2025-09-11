@@ -15,7 +15,7 @@ const WebDevelopment = () => {
         <Box>
             <InnerPageHeader heading="Web Development" crumbs={[
                 { label: "Home", to: "/" },
-                { label: "Service", to: "/service" },
+                { label: "Service", to: "/services" },
                 { label: "Web Development" },
             ]} />
 
