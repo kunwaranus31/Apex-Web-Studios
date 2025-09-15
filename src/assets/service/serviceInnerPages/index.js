@@ -70,6 +70,38 @@ export { default as webJest } from './web-jest.png';
 export { default as webPW } from './web-pw.png';
 export { default as webFAQ } from './web-faq.webp';
 
+export { default as bigDataFirst } from './bigDataFirst.jpg';
+export { default as bigDataWhyChoose } from './bigDataWhyChoose.webp';
+export { default as bigDataArchitecture } from './bigDataArchitecture.png';
+export { default as bigDataStreaming } from './bigDataStreaming.png';
+export { default as bigDataELT } from './bigDataELT.png';
+export { default as bigDataGovernance } from './bigDataGovernance.png';
+export { default as bigDataMLOps } from './bigDataMLOps.png';
+export { default as bigDataBI } from './bigDataBI.png';
+export { default as bigDataApproach } from './bigDataApproach.png';
+export { default as bigDataAssessment } from './bigDataAssessment.png';
+export { default as bigDataPlatform } from './bigDataPlatform.png';
+export { default as bigDataImplementation } from './bigDataImplementation.png';
+export { default as bigDataInstrumentation  } from './bigDataInstrumentation.png';
+export { default as bigDataOperate } from './bigDataOperate.png';
+export { default as bigDataScale } from './bigDataScale.png';
+export { default as bigDataOutcome1 } from './bigDataOutcome1.jpg';
+export { default as bigDataOutcome2 } from './bigDataOutcome2.jpg';
+export { default as bigDataTech1 } from './bigDataTech1.png';
+export { default as bigDataTech2 } from './bigDataTech2.png';
+export { default as bigDataTech3 } from './bigDataTech3.png';
+export { default as bigDataTech4 } from './bigDataTech4.png';
+export { default as bigDataTech5 } from './bigDataTech5.png';
+export { default as bigDataTech6 } from './bigDataTech6.png';
+export { default as bigDataTech7 } from './bigDataTech7.png';
+export { default as bigDataTech8 } from './bigDataTech8.png';
+export { default as bigDataTech9 } from './bigDataTech9.png';
+export { default as bigDataTech10 } from './bigDataTech10.png';
+export { default as bigDataTech11 } from './bigDataTech11.png';
+export { default as bigDataTech12} from './bigDataTech12.png';
+export { default as bigDataTech13 } from './bigDataTech13.png';
+export { default as bigDataTech14 } from './bigDataTech14.png';
+export { default as bigDataTech15 } from './bigDataTech15.png';
 
 export {
   firstImg,

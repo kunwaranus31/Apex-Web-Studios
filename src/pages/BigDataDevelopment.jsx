@@ -1,32 +1,28 @@
 import React from 'react'
+import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage } from '../component'
+import { Box, Button, Divider, Typography } from '@mui/material'
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { appoachImg, bigDataApproach, bigDataArchitecture, bigDataAssessment, bigDataBI, bigDataELT, bigDataFirst, bigDataGovernance, bigDataImplementation, bigDataInstrumentation, bigDataMLOps, bigDataOperate, bigDataOutcome1, bigDataOutcome2, bigDataPlatform, bigDataScale, bigDataStreaming, bigDataTech1, bigDataTech10, bigDataTech11, bigDataTech12, bigDataTech13, bigDataTech14, bigDataTech15, bigDataTech2, bigDataTech3, bigDataTech4, bigDataTech5, bigDataTech6, bigDataTech7, bigDataTech8, bigDataTech9, bigDataWhyChoose, secondBg, techBg, webFAQ, } from '../assets/service/serviceInnerPages';
 import approachBg from '../assets/service/serviceBg.jpg'
 import formBg from "../assets/testimonialbg.webp";
 
 
-import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage, TextWithBorder } from "../component"
-
-import { s9, secondBg, techBg, webAlly, webApi, webBuild, webCF, webCms, webCmsIcon, webCss, webDesign, webDiscovery, webFAQ, webFirst, webFrontend, webGraph, webHtml, webJava, webJest, webJs, webLaunch, webMeasure, webNetlify, webNext, webOptimize, webOutcome1, webOutcome2, webPerformance, webProduct, webProjectImg, webPW, webShopify, webT, webTs, webV, webVercel, webWebops, webWhychoose } from '../assets/service/serviceInnerPages'
-
-import { Box, Button, Divider, Typography } from '@mui/material'
-
-const WebDevelopment = () => {
+const BigDataDevelopment = () => {
     return (
         <Box>
-            <InnerPageHeader heading="Web Development" crumbs={[
+            <InnerPageHeader heading="Big Data Development" crumbs={[
                 { label: "Home", to: "/" },
-                { label: "Service", to: "/services" },
-                { label: "Web Development" },
-            ]} />
-
-
+                { label: "Service", to: "services" },
+                { label: "Big Data Development" },
+            ]}
+            />
             <FlexBox sx={{
                 display: "block",
                 py: 5
-             }} >
+            }} >
                 <Box
                     component="img"
-                    src={webFirst}
+                    src={bigDataFirst}
                     sx={{
                         width: "100%",
                         my: 2
@@ -35,20 +31,11 @@ const WebDevelopment = () => {
                 <Typography variant='h1' sx={{
                     mb: 2
                 }} >
-                    Web Development
+                    Big Data Development
                 </Typography>
-                <Box>
-                    <TextWithBorder items={[
-                        { text: "Design" },
-                        { text: "Frontend Engineering" },
-                        { text: "Performance" },
-                        { text: "Accessibility" },
-                        { text: "WebOps" },
-                    ]} />
-                </Box>
+
                 <Typography sx={{ my: 2 }} >
-                    Complexity, simplified — we design and build web experiences that are fast, accessible, and built to scale.
-                </Typography>
+                    Complexity, simplified — scalable data platforms and streaming pipelines that deliver trusted insights.                </Typography>
                 <FlexBox sx={{ gap: 1, pt: 3, px: 0, mb: 3, alignItems: { xs: "flex-start" } }}>
                     <Button
                         component="a"
@@ -56,7 +43,7 @@ const WebDevelopment = () => {
                         variant="contained"
                         endIcon={<ArrowForwardIcon fontSize="small" />}
                     >
-                        Get a Free Technical Assessment
+                        Book a data platform review
                     </Button>
 
                     <Button
@@ -92,7 +79,7 @@ const WebDevelopment = () => {
                     <Typography
                         variant='body'
                     >
-                        We create websites and web applications that balance user experience, accessibility and long-term maintainability. Whether you need a marketing site that converts, a headless CMS storefront, or a single-page app with complex business logic, our team builds solutions that perform and adapt as your business grows.
+                        We design and build data platforms that scale reliably with your business: real-time streaming, batch processing, data lakes and analytics layers. Our focus is resilient architecture, operational excellence and turning raw data into actionable, trusted information.
                     </Typography>
                 </Box>
             </FlexBox>
@@ -104,27 +91,26 @@ const WebDevelopment = () => {
 
                 <InnerPageTextImage
                     subheading="Why Choose Lodatech"
-                    heading="Why Lodatech for web"
-                    image={webWhychoose}
-                    imageWidth='500px'
+                    heading="Why Lodatech for Big Data"
+                    image={bigDataWhyChoose}
+                    imageWidth='550px'
                     contentjustify="space-between"
                     items={[
-                        { iconHeading: "Practical design.", iconDetail: "We deliver interfaces that increase engagement and lower support burden." },
-                        { iconHeading: "Built for scale.", iconDetail: "Engineering patterns that stay maintainable as features grow." },
-                        { iconHeading: "Conversion-focused.", iconDetail: "UX + performance tuned to improve lead generation and sales." },
-                        { iconHeading: "Accessibility-first.", iconDetail: "Compliance and inclusive design baked into every project." },
-                        { iconHeading: "Production-ready operations.", iconDetail: "From CI to monitoring and runbooks — we operate what we build." },
+                        { iconHeading: "Proven at scale.", iconDetail: "We design systems for high-throughput and large datasets." },
+                        { iconHeading: "Operational focus.", iconDetail: "Monitoring, autoscaling, recovery and runbooks are built-in." },
+                        { iconHeading: "Conversion-focused.", iconDetail: "UX + performance tuned Data-first governance.to improve lead generation and sales." },
+                        { iconHeading: "Business-aligned outcomes.", iconDetail: "We prioritize analytics that drive decisions, not just pipelines." },
                     ]}
                     rowDirection="row-reverse"
                 />
             </BoxBg>
-
             <Box sx={{
                 py: 12
             }}>
                 <HeadingWithSubheading
                     subheading="LodaTech Offer"
-                    heading="What we do"
+                    heading="Core offerings
+"
                     align="center"
                 />
 
@@ -134,27 +120,27 @@ const WebDevelopment = () => {
                     gap: 2
                 }}>
                     <IconWithInfo
-                        heading="Product & UX Design"
-                        info="User research, wireframes, prototyping and design systems to ensure accessible, conversion-focused experiences."
+                        heading="Data Platform Architecture"
+                        info="Blueprints for data lakes, lakehouses and analytics-ready storage with governance, lineage and access controls."
                         infoWidth="325px"
-                        textImage={webProduct}
+                        textImage={bigDataArchitecture}
                         imageWidth="55px"
                         textClr="#000"
 
                     />
                     <IconWithInfo
-                        heading="Frontend Engineering"
-                        info="Modern frontend stacks (React, Next.js, TypeScript, Vue) with component-driven architecture and automated testing."
+                        heading="Streaming & Event Platforms"
+                        info="High-throughput Kafka platforms, stream-processing (Kafka Streams, Flink) and end-to-end observability for real-time use cases."
                         infoWidth="325px"
-                        textImage={webFrontend}
+                        textImage={bigDataStreaming}
                         imageWidth="55px"
                         textClr="#000"
                     />
                     <IconWithInfo
-                        heading="Performance & SEO"
-                        info="Server-side rendering, code-splitting, critical CSS, and performance budgets to improve load times and search rankings."
+                        heading="Batch Processing & ETL/ELT"
+                        info="Robust ETL pipelines using Spark, Databricks or native cloud services for scheduled, large-scale processing."
                         infoWidth="315px"
-                        textImage={webPerformance}
+                        textImage={bigDataELT}
                         imageWidth="55px"
                         textClr="#000"
                     />
@@ -165,32 +151,32 @@ const WebDevelopment = () => {
                     gap: 2
                 }}>
                     <IconWithInfo
-                        heading="Accessibility (A11y)"
-                        info="WCAG-compliant patterns, keyboard-first interactions and assistive technology testing to make your site usable by everyone."
+                        heading="Data Governance & Quality"
+                        info="Automated quality checks, schema evolution strategies and data contracts to reduce downstream errors."
                         infoWidth="325px"
-                        textImage={webAlly}
+                        textImage={bigDataGovernance}
                         imageWidth="55px"
                         textClr="#000"
                     />
                     <IconWithInfo
-                        heading="E-commerce & Headless CMS"
-                        info="Headless commerce, CMS integrations (Contentful, Strapi, Sanity), and fast, conversion-optimized storefronts."
+                        heading="MLOps & Model Pipelines"
+                        info="Production-ready training & deployment pipelines, model registry and reproducible feature stores."
                         infoWidth="325px"
-                        textImage={webCms}
+                        textImage={bigDataMLOps}
                         imageWidth="55px"
                         textClr="#000"
                     />
                     <IconWithInfo
-                        heading="WebOps & Security"
-                        info="CI/CD, image optimization, caching, CDN strategy and security hardening to keep sites fast and safe in production."
+                        heading="Analytics & BI Enablement"
+                        info="Data marts, dashboards and self-serve analytics that empower product and business teams."
                         infoWidth="320px"
-                        textImage={webWebops}
+                        textImage={bigDataBI}
                         imageWidth="55px"
                         textClr="#000"
                     />
                 </FlexBox>
-            </Box>
 
+            </Box>
             <BoxBg
                 bgImage={approachBg}
                 sx={{
@@ -199,14 +185,13 @@ const WebDevelopment = () => {
             >
                 <HeadingWithSubheading
                     subheading="LodaTech Approach"
-                    heading="Our process for web projects"
+                    heading="Our Approach To Big Data"
                     align="center"
                 />
                 <Typography
                     textAlign="center"
                 >
-                    A practical, iterative approach designed to reduce risk and deliver value early.
-                </Typography>
+                    From pilots to platform: pragmatic, measurable steps to production-grade data capabilities.                    </Typography>
 
                 <FlexBox sx={{
                     py: 4,
@@ -216,30 +201,30 @@ const WebDevelopment = () => {
                 }}>
                     <Box>
                         <IconWithInfo
-                            heading="Discovery & goals"
-                            info="Convert metrics and stakeholders into measurable success criteria."
+                            heading="Assessment"
+                            info="Inventory sources, schemas, SLAs and failure modes."
                             infoWidth="320px"
-                            textImage={webDiscovery}
+                            textImage={bigDataAssessment}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
                             hover={false}
                         />
                         <IconWithInfo
-                            heading="Design & prototype "
-                            info="Rapid prototypes and usability testing to validate assumptions."
+                            heading="Platform design "
+                            info="Choose storage, streaming and compute strategies that match workload patterns."
                             infoWidth="330px"
-                            textImage={webDesign}
+                            textImage={bigDataPlatform}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
                             hover={false}
                         />
                         <IconWithInfo
-                            heading="Build & test"
-                            info="Component-driven development, automated and accessibility tests."
+                            heading="Implementation"
+                            info="Stream & batch pipelines, testing harnesses and CI for data code."
                             infoWidth="320px"
-                            textImage={webBuild}
+                            textImage={bigDataImplementation}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -248,37 +233,37 @@ const WebDevelopment = () => {
                     </Box>
                     <Box
                         component="img"
-                        src={webProjectImg}
+                        src={bigDataApproach}
                         sx={{
                             width: { xs: "100%", lg: "500px" }
                         }}
                     />
                     <Box>
                         <IconWithInfo
-                            heading="Optimize"
-                            info="Performance tuning, SEO checks and conversion rate improvements."
-                            infoWidth="320px"
-                            textImage={webOptimize}
+                            heading="Instrumentation "
+                            info="Metrics, tracing, lineage and alerting for data health."
+                            infoWidth="310px"
+                            textImage={bigDataInstrumentation}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
                             hover={false}
                         />
                         <IconWithInfo
-                            heading="Launch & operate"
-                            info="CI/CD, monitoring, CDN, backups and security reviews."
+                            heading="Operate "
+                            info="SRE-driven runbooks, capacity planning and incident playbooks."
                             infoWidth="320px"
-                            textImage={webLaunch}
+                            textImage={bigDataOperate}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
                             hover={false}
                         />
                         <IconWithInfo
-                            heading="Measure & iterate"
-                            info="Analytics-driven improvements and A/B experiments."
+                            heading="Scale"
+                            info="Optimize cost, governance and self-serve capabilities for broader teams."
                             infoWidth="320px"
-                            textImage={webMeasure}
+                            textImage={bigDataScale}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -302,7 +287,7 @@ const WebDevelopment = () => {
                     <Box>
                         <Box
                             component="img"
-                            src={webOutcome1}
+                            src={bigDataOutcome1}
                             sx={{
                                 width: "100%"
                             }}
@@ -312,26 +297,25 @@ const WebDevelopment = () => {
                             textAlign="center"
                             pt="5px"
                         >
-                            Marketing site redesign for SaaS
+                            Real-time payments insight for FinTech
                         </Typography>
                         <Typography
                             variant='body'
                             textAlign="center"
                             display="block"
                             sx={{
-                                width: { sm: "100%", md: "500px" }
+                                width: { sm: "100%", md: "540px" }
 
                             }}
                             justifySelf="center"
                             pt="10px"
                         >
-                            Improved Core Web Vitals and conversion rate: 40% faster load times and a 22% lift in trial signups within 60 days.
-                        </Typography>
+                            Built a streaming platform to process payments events; supported real-time reconciliation and fraud detection, reducing incident response time by 70%.                        </Typography>
                     </Box>
                     <Box>
                         <Box
                             component="img"
-                            src={webOutcome2}
+                            src={bigDataOutcome2}
                             sx={{
                                 width: "100%"
                             }}
@@ -341,7 +325,7 @@ const WebDevelopment = () => {
                             textAlign="center"
                             pt="5px"
                         >
-                            Headless storefront for retail brand
+                            Enterprise data lake & analytics
                         </Typography>
                         <Typography
                             variant='body'
@@ -355,8 +339,7 @@ const WebDevelopment = () => {
                             justifySelf="center"
                             pt="10px"
                         >
-                            Launched headless commerce with a React storefront and CDN-backed assets — conversion increased and average page load fell below 1.5s.
-                        </Typography>
+                            Delivered a governed lakehouse and analytics layer powering executive dashboards and automated reporting across business units.                        </Typography>
                     </Box>
                 </FlexBox>
                 <Box sx={{
@@ -378,23 +361,22 @@ const WebDevelopment = () => {
                 bgImage={techBg}
             >
                 <Typography variant='h2' textAlign="center" pb="15px" >
-                    Technologies & integrations
-                </Typography>
-                <Typography textAlign="center">
-                    We commonly use
+                    Technologies we use
                 </Typography>
                 <FlexBox sx={{
                     justifyContent: "center",
                     gap: 2,
                     py: 2
                 }}>
-                    <Box component="img" src={webHtml} sx={{ width: "90px" }} />
-                    <Box component="img" src={webCss} sx={{ width: "90px" }} />
-                    <Box component="img" src={webJs} sx={{ width: "90px" }} />
-                    <Box component="img" src={s9} sx={{ width: "90px" }} />
-                    <Box component="img" src={webNext} sx={{ width: "90px" }} />
-                    <Box component="img" src={webTs} sx={{ width: "90px" }} />
-                    <Box component="img" src={webV} sx={{ width: "90px" }} />
+                    <Box component="img" src={bigDataTech1} sx={{ width: "90px" }} />
+                    <Box component="img" src={bigDataTech2} sx={{ width: "90px" }} />
+                    <Box component="img" src={bigDataTech3} sx={{ width: "90px" }} />
+                    <Box component="img" src={bigDataTech4} sx={{ width: "90px" }} />
+                    <Box component="img" src={bigDataTech5} sx={{ width: "90px" }} />
+                    <Box component="img" src={bigDataTech6} sx={{ width: "90px" }} />
+                    <Box component="img" src={bigDataTech7} sx={{ width: "90px" }} />
+                    <Box component="img" src={bigDataTech8} sx={{ width: "90px" }} />
+                    <Box component="img" src={bigDataTech9} sx={{ width: "90px" }} />
 
                 </FlexBox>
                 <FlexBox sx={{
@@ -403,27 +385,14 @@ const WebDevelopment = () => {
                     py: 1,
                     pb: 3
                 }}>
-                    <Box component="img" src={webT} sx={{ width: "90px" }} />
-                    <Box component="img" src={webJava} sx={{ width: "90px" }} />
-                    <Box component="img" src={webGraph} sx={{ width: "90px" }} />
-                    <Box component="img" src={webApi} sx={{ width: "90px" }} />
-                    <Box component="img" src={webCmsIcon} sx={{ width: "90px" }} />
+                    <Box component="img" src={bigDataTech10} sx={{ width: "90px" }} />
+                    <Box component="img" src={bigDataTech11} sx={{ width: "90px" }} />
+                    <Box component="img" src={bigDataTech12} sx={{ width: "90px" }} />
+                    <Box component="img" src={bigDataTech13} sx={{ width: "90px" }} />
+                    <Box component="img" src={bigDataTech14} sx={{ width: "90px" }} />
+                    <Box component="img" src={bigDataTech15} sx={{ width: "90px" }} />
                 </FlexBox>
-                <Typography variant='h2' textAlign="center" >
-                    Contentful, Sanity
-                </Typography>
-                <FlexBox sx={{
-                    justifyContent: "center",
-                    gap: 2,
-                    py: 3
-                }}>
-                    <Box component="img" src={webShopify} sx={{ width: "90px" }} />
-                    <Box component="img" src={webVercel} sx={{ width: "90px" }} />
-                    <Box component="img" src={webNetlify} sx={{ width: "90px" }} />
-                    <Box component="img" src={webCF} sx={{ width: "90px" }} />
-                    <Box component="img" src={webJest} sx={{ width: "90px" }} />
-                    <Box component="img" src={webPW} sx={{ width: "90px" }} />
-                </FlexBox>
+
             </BoxBg>
             <FlexBox sx={{
                 gap: { xs: 3, md: 17 },
@@ -440,10 +409,10 @@ const WebDevelopment = () => {
                     <AccordionFaq
                         items={[
                             {
-                                question: "How long does a website project take?", answer: "Depends on scope. Simple marketing sites can be delivered in 4–8 weeks; larger web apps and headless commerce projects typically take 3–6 months."
+                                question: "How do you ensure data quality?", answer: "We use automated tests, streaming and batch validation, monitoring and alerting, plus contracts/schema checks to surface issues early."
                             },
                             {
-                                question: "What about cost control?", answer: "Depends on scope. Simple marketing sites can be delivered in 4–8 weeks; larger web apps and headless commerce projects typically take 3–6 months."
+                                question: "Do you handle content and SEO?", answer: "Depends on scope. Simple marketing sites can be delivered in 4–8 weeks; larger web apps and headless commerce projects typically take 3–6 months."
                             },
                             {
                                 question: "Can you make our site accessible?"
@@ -454,7 +423,7 @@ const WebDevelopment = () => {
                 <Box>
                     <Box
                         component="img"
-                        src={webFAQ}
+                        src={appoachImg}
                         width="100%"
 
                     />
@@ -484,7 +453,8 @@ const WebDevelopment = () => {
             </BoxBg>
         </Box>
 
+        
     )
 }
 
-export default WebDevelopment
+export default BigDataDevelopment

@@ -7,6 +7,7 @@ import AboutUs from './pages/AboutUs'
 import Services from './pages/Services'
 import SoftwareDevelopment from './pages/SoftwareDevelopment'
 import WebDevelopment from './pages/WebDevelopment'
+import BigDataDevelopment from './pages/BigDataDevelopment'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='services' element={<Services/>} />
         <Route path='software-development' element={<SoftwareDevelopment/>} />
         <Route path='web-development' element={<WebDevelopment/>} />
+        <Route path="big-data-development" element={<BigDataDevelopment/> } />
 
       </Routes>
       <Footer />

@@ -34,9 +34,9 @@ const navItems = [
 const servicesItems = [
   { name: "Software Development", link: "/software-development" },
   { name: "Web Development", link: "/web-development" },
+  { name: "Big Data Development", link: "/big-data-development" },
   { name: "AI & Data Engineering", link: "#" },
   { name: "DevOps", link: "#" },
-  { name: "Big Data Development", link: "#" },
   { name: "Cloud Migration", link: "#" },
 ];
 
