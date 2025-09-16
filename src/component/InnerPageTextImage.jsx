@@ -21,14 +21,14 @@ const InnerPageTextImage = ({
     rowDirection,
     containerWidth,
     contentjustify
-    
+
 }) => {
     return (
         <FlexBox sx={{
-            flexDirection:{xs:"column", md:rowDirection},
-            width:containerWidth ,
+            flexDirection: { xs: "column", md: rowDirection },
+            width: containerWidth,
             justifyContent: contentjustify
-            }}>
+        }}>
             <Box>
                 <Box
                     component="img"
@@ -52,7 +52,7 @@ const InnerPageTextImage = ({
                 </Typography>
 
                 {/* Render Buttons only if props are passed */}
-                <FlexBox sx={{ gap: 1, pt: 3, px:0, alignItems:{sx:"flex-start"} }}>
+                <FlexBox sx={{ gap: 1, pt: 3, px: 0, alignItems: { sx: "flex-start" } }}>
                     <Box>
 
                         {btnText1 && btnLink1 && (
@@ -120,7 +120,7 @@ const InnerPageTextImage = ({
                     </Box>
                 )}
             </Box>
-            
+
         </FlexBox>
     );
 };

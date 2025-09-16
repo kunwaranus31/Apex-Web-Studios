@@ -8,6 +8,7 @@ import Services from './pages/Services'
 import SoftwareDevelopment from './pages/SoftwareDevelopment'
 import WebDevelopment from './pages/WebDevelopment'
 import BigDataDevelopment from './pages/BigDataDevelopment'
+import AiDevelopment from './pages/AiDevelopment'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path='software-development' element={<SoftwareDevelopment/>} />
         <Route path='web-development' element={<WebDevelopment/>} />
         <Route path="big-data-development" element={<BigDataDevelopment/> } />
+        <Route path="ai-development" element={<AiDevelopment/> } />
 
       </Routes>
       <Footer />

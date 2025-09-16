@@ -13,18 +13,22 @@ let theme = createTheme({
     h2: {
       fontSize: "2.25rem",
       fontWeight: 600,
+      textTransform:"capitalize",
     },
     h3: {
       fontSize: "1.4rem",
       fontWeight: 600,
+      textTransform:"capitalize",
     },
     h4: {
       fontSize: "1.25rem",
       fontWeight: 600,
+      textTransform:"capitalize",
     },
     h5: {
       fontSize: "1.15rem",
       fontWeight: 600,
+      textTransform:"capitalize",
     },
     body: {
       fontFamily: "urbanist"

@@ -28,6 +28,7 @@ const IconWithInfo = ({
     : {};
 
   return (
+    
     <Box
       sx={{
         display: "flex",

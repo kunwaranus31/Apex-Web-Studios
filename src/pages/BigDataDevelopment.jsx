@@ -2,7 +2,7 @@ import React from 'react'
 import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage } from '../component'
 import { Box, Button, Divider, Typography } from '@mui/material'
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { appoachImg, bigDataApproach, bigDataArchitecture, bigDataAssessment, bigDataBI, bigDataELT, bigDataFirst, bigDataGovernance, bigDataImplementation, bigDataInstrumentation, bigDataMLOps, bigDataOperate, bigDataOutcome1, bigDataOutcome2, bigDataPlatform, bigDataScale, bigDataStreaming, bigDataTech1, bigDataTech10, bigDataTech11, bigDataTech12, bigDataTech13, bigDataTech14, bigDataTech15, bigDataTech2, bigDataTech3, bigDataTech4, bigDataTech5, bigDataTech6, bigDataTech7, bigDataTech8, bigDataTech9, bigDataWhyChoose, secondBg, techBg, webFAQ, } from '../assets/service/serviceInnerPages';
+import { appoachImg, bigDataApproach, bigDataArchitecture, bigDataAssessment, bigDataBI, bigDataELT, bigDataFirst, bigDataGovernance, bigDataImplementation, bigDataInstrumentation, bigDataMLOps, bigDataOperate, bigDataOutcome1, bigDataOutcome2, bigDataPlatform, bigDataScale, bigDataStreaming, bigDataTech1, bigDataTech10, bigDataTech11, bigDataTech12, bigDataTech13, bigDataTech14, bigDataTech15, bigDataTech2, bigDataTech3, bigDataTech4, bigDataTech5, bigDataTech6, bigDataTech7, bigDataTech8, bigDataTech9, bigDataWhyChoose, secondBg, techBg, } from '../assets/service/serviceInnerPages';
 import approachBg from '../assets/service/serviceBg.jpg'
 import formBg from "../assets/testimonialbg.webp";
 
@@ -12,7 +12,7 @@ const BigDataDevelopment = () => {
         <Box>
             <InnerPageHeader heading="Big Data Development" crumbs={[
                 { label: "Home", to: "/" },
-                { label: "Service", to: "services" },
+                { label: "Services", to: "services" },
                 { label: "Big Data Development" },
             ]}
             />
@@ -104,79 +104,7 @@ const BigDataDevelopment = () => {
                     rowDirection="row-reverse"
                 />
             </BoxBg>
-            <Box sx={{
-                py: 12
-            }}>
-                <HeadingWithSubheading
-                    subheading="LodaTech Offer"
-                    heading="Core offerings
-"
-                    align="center"
-                />
 
-                <FlexBox sx={{
-                    justifyContent: "center",
-                    pt: 4,
-                    gap: 2
-                }}>
-                    <IconWithInfo
-                        heading="Data Platform Architecture"
-                        info="Blueprints for data lakes, lakehouses and analytics-ready storage with governance, lineage and access controls."
-                        infoWidth="325px"
-                        textImage={bigDataArchitecture}
-                        imageWidth="55px"
-                        textClr="#000"
-
-                    />
-                    <IconWithInfo
-                        heading="Streaming & Event Platforms"
-                        info="High-throughput Kafka platforms, stream-processing (Kafka Streams, Flink) and end-to-end observability for real-time use cases."
-                        infoWidth="325px"
-                        textImage={bigDataStreaming}
-                        imageWidth="55px"
-                        textClr="#000"
-                    />
-                    <IconWithInfo
-                        heading="Batch Processing & ETL/ELT"
-                        info="Robust ETL pipelines using Spark, Databricks or native cloud services for scheduled, large-scale processing."
-                        infoWidth="315px"
-                        textImage={bigDataELT}
-                        imageWidth="55px"
-                        textClr="#000"
-                    />
-                </FlexBox>
-                <FlexBox sx={{
-                    justifyContent: "center",
-                    pt: 3,
-                    gap: 2
-                }}>
-                    <IconWithInfo
-                        heading="Data Governance & Quality"
-                        info="Automated quality checks, schema evolution strategies and data contracts to reduce downstream errors."
-                        infoWidth="325px"
-                        textImage={bigDataGovernance}
-                        imageWidth="55px"
-                        textClr="#000"
-                    />
-                    <IconWithInfo
-                        heading="MLOps & Model Pipelines"
-                        info="Production-ready training & deployment pipelines, model registry and reproducible feature stores."
-                        infoWidth="325px"
-                        textImage={bigDataMLOps}
-                        imageWidth="55px"
-                        textClr="#000"
-                    />
-                    <IconWithInfo
-                        heading="Analytics & BI Enablement"
-                        info="Data marts, dashboards and self-serve analytics that empower product and business teams."
-                        infoWidth="320px"
-                        textImage={bigDataBI}
-                        imageWidth="55px"
-                        textClr="#000"
-                    />
-                </FlexBox>
-
-            </Box>
             <BoxBg
                 bgImage={approachBg}
                 sx={{
@@ -453,7 +381,7 @@ const BigDataDevelopment = () => {
             </BoxBg>
         </Box>
 
-        
+
     )
 }
 

@@ -35,7 +35,7 @@ const servicesItems = [
   { name: "Software Development", link: "/software-development" },
   { name: "Web Development", link: "/web-development" },
   { name: "Big Data Development", link: "/big-data-development" },
-  { name: "AI & Data Engineering", link: "#" },
+  { name: "AI Development", link: "/ai-development" },
   { name: "DevOps", link: "#" },
   { name: "Cloud Migration", link: "#" },
 ];
