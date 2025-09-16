@@ -1,9 +1,10 @@
 import { Box, Button, Divider, Typography } from '@mui/material'
 import React from 'react'
-import { BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage } from '../component'
+import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage } from '../component'
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { secondBg, techBg } from '../assets/service/serviceInnerPages';
 import approachBg from '../assets/service/serviceBg.jpg'
+import { formBg } from '../assets';
 
 const AiDevelopment = () => {
     return (
