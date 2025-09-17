@@ -13,7 +13,7 @@ const DevopsCloud = () => {
                 heading="Devops"
                 crumbs={[
                     { label: "home", to: "/" },
-                    { label: "Services", to: "services" },
+                    { label: "Services", to: "/services" },
                     { label: "Devops" },
                 ]}
             />

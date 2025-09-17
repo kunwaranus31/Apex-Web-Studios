@@ -13,7 +13,7 @@ const MobileAppDevelopment = () => {
                 heading="Mobile App Development"
                 crumbs={[
                     { label: "home", to: "/" },
-                    { label: "Services", to: "services" },
+                    { label: "Services", to: "/services" },
                     { label: "Mobile App Development" },
                 ]}
             />
