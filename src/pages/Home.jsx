@@ -3,48 +3,49 @@ import { Box, Button, Typography } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 import {
-fireIcon,
-clientReview,
-rating,
-bannerImg1,
-bannerImg2,
-bannerImg3,
-bannerbg,
-secBanner,
-circleLine,
-phone1,
-phone2,
-softwareIcon,
-webIcon,
-dataIcon,
-mobileIcon,
-aiIcon,
-devopsIcon,
-phones,
-numbersBg,
-faqImage,
-testimonialBg,
-client1,
-Consultation,
-phonesImg,
-blogImg1,
-blogImg2
+    fireIcon,
+    clientReview,
+    rating,
+    bannerImg1,
+    bannerImg2,
+    bannerImg3,
+    bannerbg,
+    secBanner,
+    circleLine,
+    phone1,
+    phone2,
+    softwareIcon,
+    webIcon,
+    dataIcon,
+    mobileIcon,
+    aiIcon,
+    devopsIcon,
+    phones,
+    numbersBg,
+    faqImage,
+    testimonialBg,
+    client1,
+    Consultation,
+    phonesImg,
+    blogImg1,
+    blogImg2
 } from '../assets';
 
 import {
-Testimonial,
-AccordionFaq,
-NumberWithText,
-ImageText2,
-IconWithInfo,
-LogoSlider,
-ValueSection,
-HeadingWithSubheading,
-ImageText,
-IconTextWhite,
-HomeForm,
-Blog
+    Testimonial,
+    AccordionFaq,
+    NumberWithText,
+    ImageText2,
+    IconWithInfo,
+    LogoSlider,
+    ValueSection,
+    HeadingWithSubheading,
+    ImageText,
+    IconTextWhite,
+    HomeForm,
+    Blog
 } from '../component';
+import { Link } from "react-router-dom";
 
 const Home = () => {
 
@@ -154,6 +155,8 @@ const Home = () => {
                                 bgcolor: "#7444FD",
                                 "&:hover": { bgcolor: "#5e32d6" },
                             }}
+                            component={Link}
+                            to="#"
                             endIcon={
                                 <Box
                                     sx={{
@@ -186,6 +189,9 @@ const Home = () => {
                                 "&:hover": { borderWidth: 2, borderColor: "#5e32d6", bgcolor: "rgba(116,68,253,0.06)" },
                             }}
                             endIcon={<ArrowForwardIcon />}
+                            component={Link}
+                            to="/services"
+
                         >
                             Explore Services
                         </Button>
@@ -278,7 +284,19 @@ const Home = () => {
                 <LogoSlider />
             </Box>
             <Box>
-                <ImageText subheading="About LodaTech" textImage={secBanner} heading="Pioneering Custom Tech for Complex Industries" paragraph="At LodaTech, we design and deliver tailored digital solutions that empower industry leaders to scale smarter, move faster, and innovate boldly. With deep expertise in software development, intelligent systems, and data infrastructure, we help regulated industries thrive in the digital age." text1="Built for Your Industry" text2="Scalable, Intelligent Solutions" text3="A Long-Term Tech Partner" btnText="Discover More" displayShow="none" containerWidth="1440px" imageWidth="600px" />
+                <ImageText
+                    subheading="About LodaTech"
+                    textImage={secBanner}
+                    heading="Pioneering Custom Tech for Complex Industries"
+                    paragraph="At LodaTech, we design and deliver tailored digital solutions that empower industry leaders to scale smarter, move faster, and innovate boldly. With deep expertise in software development, intelligent systems, and data infrastructure, we help regulated industries thrive in the digital age."
+                    text1="Built for Your Industry"
+                    text2="Scalable, Intelligent Solutions"
+                    text3="A Long-Term Tech Partner"
+                    btnText="Discover More"
+                    btnLink="/about-us"
+                    displayShow="none"
+                    containerWidth="1440px"
+                    imageWidth="600px" />
             </Box>
             <Box sx={{ py: 5 }}>
                 <HeadingWithSubheading
@@ -338,7 +356,21 @@ const Home = () => {
                 </Box>
             </Box>
             <Box>
-                <ImageText2 subheading="LodaTech Industries" heading="Industries We Power with Precision" paragraph="Innovating Across Sectors with Tailored Technology Solutions From banking and insurance to aerospace and education, we deliver intelligent, scalable software and AI solutions that drive efficiency, growth, and transformation across industries." displayShow="block" text1="Banking" text2="Aerospace" text4="Insurance" text5="Education" btnText="Explore Industry Solution" direction="row-reverse" textImage={[phone1, phone2]} containerWidth="1440px" imageWidth="450px" />
+                <ImageText2
+                    subheading="LodaTech Industries"
+                    heading="Industries We Power with Precision"
+                    paragraph="Innovating Across Sectors with Tailored Technology Solutions From banking and insurance to aerospace and education, we deliver intelligent, scalable software and AI solutions that drive efficiency, growth, and transformation across industries."
+                    displayShow="block"
+                    text1="Banking"
+                    text2="Aerospace"
+                    text4="Insurance"
+                    text5="Education"
+                    btnText="Explore Industry Solution"
+                    btnLink="#"
+                    direction="row-reverse"
+                    textImage={[phone1, phone2]}
+                    containerWidth="1440px"
+                    imageWidth="450px" />
             </Box>
 
             <Box
@@ -516,9 +548,9 @@ const Home = () => {
                                 },
                             ]}
                             defaultExpandedIndex={0} // first open (this is the default)
-                        
+
                         />
-                        
+
                     </Box>
                 </Box>
 
@@ -622,6 +654,7 @@ const Home = () => {
 
                         {/* CTA buttons */}
                         <Box
+
                             sx={{
                                 display: "flex",
                                 flexDirection: { xs: "column", sm: "row" }, // stack on xs
@@ -634,6 +667,8 @@ const Home = () => {
                         >
                             <Button
                                 variant="contained"
+                                component={Link}
+                                to="#"
                                 sx={{
                                     borderRadius: "9999px",
                                     px: 3,
@@ -663,6 +698,8 @@ const Home = () => {
 
                             <Button
                                 variant="outlined"
+                                component={Link}
+                                to="#"
                                 sx={{
                                     borderRadius: "9999px",
                                     px: 3,

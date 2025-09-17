@@ -3,41 +3,42 @@ import React from 'react'
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 import {
-aboutUs1,
-aboutUs2,
-aboutsec3,
-mission,
-vision,
-polish,
-ownership,
-clarity,
-security,
-improv,
-engineer,
-fabrice,
-senior,
-product,
-data,
-deliver,
-pipeline,
-cloud,
-fact,
-formBg,
-fact2
+  aboutUs1,
+  aboutUs2,
+  aboutsec3,
+  mission,
+  vision,
+  polish,
+  ownership,
+  clarity,
+  security,
+  improv,
+  engineer,
+  fabrice,
+  senior,
+  product,
+  data,
+  deliver,
+  pipeline,
+  cloud,
+  fact,
+  formBg,
+  fact2
 } from "../assets";
 
 import {
-InnerPageHeader,
-InnerPageTextImage,
-BoxBg,
-FlexBox,
-HeadingWithSubheading,
-IconWithInfo,
-Team,
-HeadingInfo,
-AboutForm,
+  InnerPageHeader,
+  InnerPageTextImage,
+  BoxBg,
+  FlexBox,
+  HeadingWithSubheading,
+  IconWithInfo,
+  Team,
+  HeadingInfo,
+  AboutForm,
 
 } from '../component';
+import { Link } from 'react-router-dom';
 
 
 const AboutUs = () => {
@@ -54,7 +55,7 @@ const AboutUs = () => {
           btnText1="Book a discovery call"
           btnLink1="#"
           btnText2="Explore Services"
-          btnLink2="#"
+          btnLink2="/services"
           rowDirection="row"
         />
       </Box>
@@ -87,15 +88,15 @@ const AboutUs = () => {
           />
         </FlexBox>
         <Box>
-          <Typography variant='h2' sx={{ 
-            textAlign: "center", 
+          <Typography variant='h2' sx={{
+            textAlign: "center",
             mt: 3,
-            background:"linear-gradient(180deg,  rgba(116, 68, 253, 0.3),rgba(116, 68, 253, 0))" ,
-            borderRadius:4,
-            width:"200px",
-            justifySelf:"center",
-            py:"10px"
-            }} >
+            background: "linear-gradient(180deg,  rgba(116, 68, 253, 0.3),rgba(116, 68, 253, 0))",
+            borderRadius: 4,
+            width: "200px",
+            justifySelf: "center",
+            py: "10px"
+          }} >
             Our values
           </Typography>
         </Box>
@@ -175,7 +176,7 @@ const AboutUs = () => {
 
       <Box sx={{
         py: 5
-        
+
       }} >
         <HeadingWithSubheading
           heading="Meet the team"
@@ -188,7 +189,7 @@ const AboutUs = () => {
         </Typography>
         <FlexBox sx={{
           gap: 2,
-          justifyContent:"center",
+          justifyContent: "center",
         }} >
           <Team
             teamImg={fabrice}
@@ -309,6 +310,8 @@ const AboutUs = () => {
 
           <Button
             variant="contained"
+            component={Link}
+            to="/services"
             sx={{
               borderRadius: "9999px",
               px: 3,
@@ -369,7 +372,7 @@ const AboutUs = () => {
           maxWidth: 1200,
           mx: "auto",
           textAlign: "center",
-          px:{xs:1}
+          px: { xs: 1 }
         }}>
           <HeadingWithSubheading
             subheading="Contact Us"

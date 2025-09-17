@@ -17,31 +17,32 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 // import ctaBg from '../assets/service/service-ctaBg.png'
 
 import {
-service,
-service2,
-software,
-devops,
-ml,
-web,
-mobile,
-partner,
-bigdata,
-why,
-enterprise,
-serviceCloud,
-ctaBg,
-} from '../assets/'; 
+    service,
+    service2,
+    software,
+    devops,
+    ml,
+    web,
+    mobile,
+    partner,
+    bigdata,
+    why,
+    enterprise,
+    serviceCloud,
+    ctaBg,
+} from '../assets/';
 
 import {
-InnerPageHeader,
-BoxBg,
-FlexBox,
-HeadingWithSubheading,
-IconWithInfo,
-ValueSection,
-HeadingInfo,
+    InnerPageHeader,
+    BoxBg,
+    FlexBox,
+    HeadingWithSubheading,
+    IconWithInfo,
+    ValueSection,
+    HeadingInfo,
 
 } from '../component'
+import { Link } from 'react-router-dom';
 
 const Services = () => {
     return (
@@ -128,7 +129,7 @@ const Services = () => {
                 <FlexBox sx={{
                     justifyContent: "center",
                     pt: 4,
-                    gap:2
+                    gap: 2
                 }}>
                     <IconWithInfo
                         heading="Software Development"
@@ -136,7 +137,7 @@ const Services = () => {
                         infoWidth="325px"
                         textImage={software}
                         imageWidth="55px"
-                        link="software-development"
+                        link="/software-development"
                     />
                     <IconWithInfo
                         heading="Web Development"
@@ -144,7 +145,7 @@ const Services = () => {
                         infoWidth="325px"
                         textImage={web}
                         imageWidth="55px"
-                        link="#"
+                        link="/web-development"
                     />
                     <IconWithInfo
                         heading="Big Data Development"
@@ -152,13 +153,13 @@ const Services = () => {
                         infoWidth="315px"
                         textImage={bigdata}
                         imageWidth="55px"
-                        link="#"
+                        link="/big-data-development"
                     />
                 </FlexBox>
                 <FlexBox sx={{
                     justifyContent: "center",
                     pt: 3,
-                    gap:2
+                    gap: 2
                 }}>
                     <IconWithInfo
                         heading="AI / ML Development"
@@ -166,7 +167,7 @@ const Services = () => {
                         infoWidth="325px"
                         textImage={ml}
                         imageWidth="55px"
-                        link="#"
+                        link="/ai-development"
                     />
                     <IconWithInfo
                         heading="DevOps & Cloud Engineering"
@@ -174,7 +175,7 @@ const Services = () => {
                         infoWidth="325px"
                         textImage={devops}
                         imageWidth="55px"
-                        link="#"
+                        link="/devops"
                     />
                     <IconWithInfo
                         heading="Mobile App Development"
@@ -182,7 +183,7 @@ const Services = () => {
                         infoWidth="320px"
                         textImage={mobile}
                         imageWidth="55px"
-                        link="#"
+                        link="/mobile-app-development"
                     />
                 </FlexBox>
             </Box>
@@ -281,11 +282,11 @@ const Services = () => {
                         ]}
                     />
                     <Button
-                        component="a"
-                        href="#"
+                        component={Link}
+                        to="#"
                         variant="contained"
                         endIcon={<ArrowForwardIcon fontSize="small" />}
-                        
+
                     >
                         Request a services consultation
                     </Button>
@@ -297,7 +298,7 @@ const Services = () => {
                         component="img"
                         src={why}
                         sx={{
-                            width: { xs: "260px", sm: "300px", md: "500px"},
+                            width: { xs: "260px", sm: "300px", md: "500px" },
                             maxWidth: "100%",
                             mx: "auto",
                         }}
@@ -358,7 +359,7 @@ const Services = () => {
                 mx: "auto",
                 px: { xs: 2, sm: 3, md: 6 },
                 py: { xs: 4, md: 1, lg: 8 },
-                mb:{xs:3, md:9},
+                mb: { xs: 3, md: 9 },
                 borderRadius: 6,
                 backgroundImage: `url(${ctaBg})`,
                 backgroundSize: "cover",
@@ -382,8 +383,8 @@ const Services = () => {
 
                 <FlexBox sx={{ gap: 1, pt: 3, px: 0, justifyContent: "center" }}>
                     <Button
-                        component="a"
-                        href="#"
+                        component={Link}
+                        to="#"
                         variant="contained"
                         endIcon={<ArrowForwardIcon fontSize="small" />}
                         sx={{
@@ -394,8 +395,8 @@ const Services = () => {
                         Book Discovery Call
                     </Button>
                     <Button
-                        component="a"
-                        href="#"
+                        component={Link}
+                        to="#"
                         variant="contained"
                         endIcon={<ArrowForwardIcon fontSize="small" />}
                         sx={{

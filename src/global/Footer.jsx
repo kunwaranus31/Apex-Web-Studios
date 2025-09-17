@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Link, Typography } from '@mui/material'
+import { Box, Button, Divider, Typography } from '@mui/material'
 import React from 'react'
 import footerImg from "../assets/footer.png";
 import logo from "../assets/logo.png";
@@ -10,23 +10,24 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PinterestIcon from '@mui/icons-material/Pinterest';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
 
     const items = [
-        { label: "Software Development", href: "#" },
-        { label: "Web Development", href: "#" },
-        { label: "Big Data Development", href: "#" },
-        { label: "Mobile App Development", href: "#" },
-        { label: "AI Development", href: "#" },
-        { label: "DevOps", href: "#" },
+        { label: "Software Development", href: "/software-development" },
+        { label: "Web Development", href: "/web-development" },
+        { label: "Big Data Development", href: "/big-data-development" },
+        { label: "AI Development", href: "/ai-development" },
+        { label: "DevOps", href: "/devops" },
+        { label: "Mobile App Development", href: "/mobile-app-development" },
     ];
 
     const pageItems = [
-        { label: "Home", href: "#" },
-        { label: "About Us", href: "#" },
-        { label: "Services", href: "#" },
+        { label: "Home", href: "/" },
+        { label: "About Us", href: "/about-us" },
+        { label: "Services", href: "/services" },
         { label: "Industries", href: "#" },
         { label: "Contact", href: "#" },
     ];
@@ -50,7 +51,7 @@ const Footer = () => {
                 sx={{// hero container
                     maxWidth: "1440px",
                     mx: "auto",
-                    pt:5,
+                    pt: 5,
                 }}>
                 <Box
                     sx={{// hero container
@@ -58,7 +59,7 @@ const Footer = () => {
                         justifyContent: "space-between",
                         pb: 2,
                         flexDirection: { xs: "column", md: "row" },
-                        gap: { xs: 4, md: 0 }, 
+                        gap: { xs: 4, md: 0 },
                     }}>
                     <Box sx={{ width: "370px" }} >
                         <Box component="img" src={logo} sx={{ width: 180 }} />
@@ -67,6 +68,8 @@ const Footer = () => {
                         <Box sx={{ display: "flex", gap: 2.5, mb: { xs: 3, md: 5 }, flexWrap: "wrap", mt: 4 }}>
                             <Button
                                 variant="contained"
+                                component={Link}
+                                to="#"
                                 sx={{
                                     borderRadius: "9999px",
                                     px: 3,
@@ -96,6 +99,8 @@ const Footer = () => {
 
                             <Button
                                 variant="outlined"
+                                component={Link}
+                                to="/services"
                                 sx={{
                                     borderRadius: "9999px",
                                     px: 3,
@@ -133,10 +138,15 @@ const Footer = () => {
                         </Box>
                         <Box component="ul" sx={{ listStyle: "none", p: 0, mt: 3.5, color: "#797979" }}>
                             {pageItems.map(({ label, href }) => (
-                                <Box component="li" key={label} sx={{ mb: 1.3 }}>
-                                    <Link href={href} underline="none" color="inherit">
-                                        {label}
-                                    </Link>
+                                <Box component="li" key={label} sx={{listStyle: "none", mb: 1.3 }}>
+                                    <Typography 
+                                    to={href} 
+                                    sx={{textDecoration:"none"}} 
+                                    component={Link} 
+                                    underline="none" 
+                                    color="inherit">
+                                        <Typography  variant="body1">{label}</Typography>
+                                    </Typography>
                                 </Box>
                             ))}
                         </Box>
@@ -164,9 +174,14 @@ const Footer = () => {
                         <Box component="ul" sx={{ listStyle: "none", p: 0, mt: 3.5, color: "#797979" }}>
                             {items.map(({ label, href }) => (
                                 <Box component="li" key={label} sx={{ mb: 1.3 }}>
-                                    <Link href={href} underline="none" color="inherit">
-                                        {label}
-                                    </Link>
+                                    <Typography 
+                                    component={Link} 
+                                    to={href} 
+                                    underline="none" 
+                                    color="inherit"
+                                        sx={{textDecoration:"none"}} >
+                                        <Typography variant="body1">{label}</Typography>
+                                    </Typography>
                                 </Box>
                             ))}
                         </Box>
@@ -218,16 +233,19 @@ const Footer = () => {
                 <Box sx={{ py: 1 }} >
                     <Divider />
                 </Box>
-                <Box sx={{ display: "flex", justifyContent: "space-between", py: 1,flexDirection: { xs: "column", sm: "row" },
-    alignItems: { xs: "flex-start", sm: "center" },
-    gap: { xs: 2, sm: 0 }, }} >
+                <Box sx={{
+                    display: "flex", justifyContent: "space-between", py: 1, flexDirection: { xs: "column", sm: "row" },
+                    alignItems: { xs: "flex-start", sm: "center" },
+                    gap: { xs: 2, sm: 0 },
+                }} >
                     <Box>
 
 
                         <Typography>
                             © 2025 – All rights reserved – LodaTech Inc. Powered by{" "}
-                            <Link
-                                href="https://apexwebstudios.net/"
+                            <Typography
+                                component={Link}
+                                to="https://apexwebstudios.net/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 underline="none"
@@ -237,26 +255,45 @@ const Footer = () => {
                                     px: 1,
                                     py: 0.5,
                                     borderRadius: 1,
+                                    textDecoration:"none",
                                 }}
                             >
                                 APEX Web Studios.
-                            </Link>
+                            </Typography>
                         </Typography>
 
                     </Box>
                     <Box sx={{ display: "flex", gap: 3 }}>
-                        <Link href="#" color="inherit" underline="none">
+
+
+                        <Box 
+                        component={Link}
+                        to="#"
+                        color="inherit"
+                         >
                             <FacebookIcon />
-                        </Link>
-                        <Link href="#" color="inherit" underline="none">
+                        </Box>
+                        <Box 
+                        component={Link}
+                        to="#"
+                        color="inherit"
+                         >
                             <TwitterIcon />
-                        </Link>
-                        <Link href="#" color="inherit" underline="none">
+                        </Box>
+                        <Box 
+                        component={Link}
+                        to="#"
+                        color="inherit"
+                         >
                             <LinkedInIcon />
-                        </Link>
-                        <Link href="#" color="inherit" underline="none">
+                        </Box>
+                        <Box 
+                        component={Link}
+                        to="#"
+                        color="inherit"
+                         >
                             <PinterestIcon />
-                        </Link>
+                        </Box>
                     </Box>
                 </Box>
             </Box>

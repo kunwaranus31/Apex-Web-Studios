@@ -36,8 +36,8 @@ const servicesItems = [
   { name: "Web Development", link: "/web-development" },
   { name: "Big Data Development", link: "/big-data-development" },
   { name: "AI Development", link: "/ai-development" },
-  { name: "DevOps", link: "#" },
-  { name: "Cloud Migration", link: "#" },
+  { name: "DevOps", link: "/devops" },
+  { name: "Mobile App Development", link: "/mobile-app-development" },
 ];
 
 const Header = () => {

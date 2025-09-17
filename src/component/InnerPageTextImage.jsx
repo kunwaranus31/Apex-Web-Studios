@@ -4,6 +4,7 @@ import HeadingWithSubheading from './HeadingWithSubheading';
 import FlexBox from './FlexBox';
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CheckIconHeadingText from './CheckIconHeadingText';
+import { Link } from 'react-router-dom';
 
 const InnerPageTextImage = ({
     subheading,
@@ -57,8 +58,8 @@ const InnerPageTextImage = ({
 
                         {btnText1 && btnLink1 && (
                             <Button
-                                component="a"
-                                href={btnLink1}
+                                component={Link}
+                                to={btnLink1}
                                 variant="contained"
                                 sx={{
                                     borderRadius: "9999px",
@@ -92,8 +93,8 @@ const InnerPageTextImage = ({
 
                         {btnText2 && btnLink2 && (
                             <Button
-                                component="a"
-                                href={btnLink2}
+                                component={Link}
+                                to={btnLink2}
                                 variant="outlined"
                                 sx={{
                                     borderRadius: "9999px",

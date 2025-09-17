@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { Link } from 'react-router-dom';
 
 const IconWithInfo = ({
   textImage,
@@ -73,10 +74,8 @@ const IconWithInfo = ({
 
         {link && (
           <Typography
-            component="a"
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
+            component={Link}
+            to={link}
             sx={{
               color: "#7444FD",
               alignItems: "center",

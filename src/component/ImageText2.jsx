@@ -3,23 +3,25 @@ import React, { useEffect } from 'react'
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import IconText from './IconText';
 import CheckIconText from './CheckIconText';
+import { Link } from 'react-router-dom';
 
-const ImageText2 = ({ 
-  subheading, 
-  heading, 
-  paragraph, 
-  textImage, 
-  displayShow, 
-  text1, 
-  text2, 
-  text4, 
-  text5, 
-  btnText, 
-  direction, 
-  containerWidth, 
-  imageWidth 
+const ImageText2 = ({
+  subheading,
+  heading,
+  paragraph,
+  textImage,
+  displayShow,
+  text1,
+  text2,
+  text4,
+  text5,
+  btnText,
+  btnLink,
+  direction,
+  containerWidth,
+  imageWidth
 }) => {
-    const [current, setCurrent] = React.useState(0);
+  const [current, setCurrent] = React.useState(0);
 
   const slides = Array.isArray(textImage) ? textImage : [textImage];
 
@@ -42,16 +44,16 @@ const ImageText2 = ({
         background: "#FAF8FF",
         borderRadius: 6,
       }}>
-      <Box sx={{ display: "flex", alignItems: "top", gap: 9, flexDirection: { xs: "column", md:direction }, justifyContent: "center" }} >
+      <Box sx={{ display: "flex", alignItems: "top", gap: 9, flexDirection: { xs: "column", md: direction }, justifyContent: "center" }} >
         <Box sx={{
-            position: "relative",
-            width: {xs:"100%",md:imageWidth},
-            height: {xs:"100%",md:"auto"},
-            flexShrink: 0,
-            // Ensure visible height for absolutely positioned images on mobile
-            aspectRatio: { xs: '16 / 10', md: 'auto' },
-            minHeight: { md: "auto" },
-          }}>
+          position: "relative",
+          width: { xs: "100%", md: imageWidth },
+          height: { xs: "100%", md: "auto" },
+          flexShrink: 0,
+          // Ensure visible height for absolutely positioned images on mobile
+          aspectRatio: { xs: '16 / 10', md: 'auto' },
+          minHeight: { md: "auto" },
+        }}>
           {slides.map((src, i) => (
             <Box
               key={i}
@@ -106,6 +108,8 @@ const ImageText2 = ({
               bgcolor: "#7444FD",
               "&:hover": { bgcolor: "#5e32d6" },
             }}
+            component={Link}
+            to={btnLink}
             endIcon={
 
               <ArrowForwardIcon fontSize="small" />

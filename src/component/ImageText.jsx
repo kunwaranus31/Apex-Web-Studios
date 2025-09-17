@@ -3,6 +3,7 @@ import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import IconText from "./IconText";
 import CheckIconText from "./CheckIconText";
+import { Link } from "react-router-dom";
 
 const ImageText = ({
   subheading,
@@ -16,6 +17,7 @@ const ImageText = ({
   text4,
   text5,
   btnText,
+  btnLink,
   direction = "row", // default
   containerWidth = "1400px",
   imageWidth = { xs: "100%", md: "500px" }, // responsive default
@@ -119,6 +121,8 @@ const ImageText = ({
                 bgcolor: "#7444FD",
                 "&:hover": { bgcolor: "#5e32d6" },
               }}
+              component={Link}
+              to={btnLink}
               endIcon={<ArrowForwardIcon fontSize="small" />}
             >
               {btnText}
