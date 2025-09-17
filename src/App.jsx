@@ -9,8 +9,8 @@ import SoftwareDevelopment from './pages/SoftwareDevelopment'
 import WebDevelopment from './pages/WebDevelopment'
 import BigDataDevelopment from './pages/BigDataDevelopment'
 import AiDevelopment from './pages/AiDevelopment'
-import Devops from './pages/devops'
 import MobileAppDevelopment from './pages/MobileAppDevelopment'
+import DevopsCloud from './pages/DevopsCloud'
 
 const App = () => {
   return (
@@ -24,7 +24,7 @@ const App = () => {
         <Route path='web-development' element={<WebDevelopment/>} />
         <Route path="big-data-development" element={<BigDataDevelopment/> } />
         <Route path="ai-development" element={<AiDevelopment/> } />
-        <Route path="devops" element={ <Devops/> } />
+        <Route path="devops" element={ <DevopsCloud/> } />
         <Route path="mobile-app-development" element={ <MobileAppDevelopment/> } />
 
       </Routes>

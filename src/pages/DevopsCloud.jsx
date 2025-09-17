@@ -6,7 +6,7 @@ import { secondBg, techBg } from '../assets/service/serviceInnerPages';
 import approachBg from '../assets/service/serviceBg.jpg'
 import { formBg } from '../assets';
 
-const Devops = () => {
+const DevopsCloud = () => {
     return (
         <Box>
             <InnerPageHeader
@@ -464,4 +464,4 @@ const Devops = () => {
     )
 }
 
-export default Devops
+export default DevopsCloud
