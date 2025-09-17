@@ -197,7 +197,7 @@ const Devops = () => {
                 <Typography
                     textAlign="center"
                 >
-We combine engineering, automation and operational rigor into a repeatable delivery pattern.
+                    We combine engineering, automation and operational rigor into a repeatable delivery pattern.
                 </Typography>
 
                 <FlexBox sx={{
@@ -317,7 +317,7 @@ We combine engineering, automation and operational rigor into a repeatable deliv
                             justifySelf="center"
                             pt="10px"
                         >
-Implemented GitOps-driven platform, standard pipelines and self-service namespaces — deployment frequency rose 4× and lead time dropped dramatically.
+                            Implemented GitOps-driven platform, standard pipelines and self-service namespaces — deployment frequency rose 4× and lead time dropped dramatically.
                         </Typography>
                     </Box>
                     <Box>
@@ -347,7 +347,7 @@ Implemented GitOps-driven platform, standard pipelines and self-service namespac
                             justifySelf="center"
                             pt="10px"
                         >
-Defined SLOs, introduced error budgets and improved incident response; MTTR reduced by 65% and customer-impacting incidents dropped significantly.
+                            Defined SLOs, introduced error budgets and improved incident response; MTTR reduced by 65% and customer-impacting incidents dropped significantly.
 
 
                         </Typography>
