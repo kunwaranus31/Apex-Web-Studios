@@ -4,7 +4,7 @@ import approachBg from '../assets/service/serviceBg.jpg'
 import formBg from "../assets/testimonialbg.webp";
 
 
-import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage, TextWithBorder } from "../component"
+import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage, TechnologyIcons, TextWithBorder } from "../component"
 
 import { s9, secondBg, techBg, webAlly, webApi, webBuild, webCF, webCms, webCmsIcon, webCss, webDesign, webDiscovery, webFAQ, webFirst, webFrontend, webGraph, webHtml, webJava, webJest, webJs, webLaunch, webMeasure, webNetlify, webNext, webOptimize, webOutcome1, webOutcome2, webPerformance, webProduct, webProjectImg, webPW, webShopify, webT, webTs, webV, webVercel, webWebops, webWhychoose } from '../assets/service/serviceInnerPages'
 
@@ -23,7 +23,7 @@ const WebDevelopment = () => {
             <FlexBox sx={{
                 display: "block",
                 py: 5
-             }} >
+            }} >
                 <Box
                     component="img"
                     src={webFirst}
@@ -383,47 +383,47 @@ const WebDevelopment = () => {
                 <Typography textAlign="center">
                     We commonly use
                 </Typography>
-                <FlexBox sx={{
-                    justifyContent: "center",
-                    gap: 2,
-                    py: 2
-                }}>
-                    <Box component="img" src={webHtml} sx={{ width: "90px" }} />
-                    <Box component="img" src={webCss} sx={{ width: "90px" }} />
-                    <Box component="img" src={webJs} sx={{ width: "90px" }} />
-                    <Box component="img" src={s9} sx={{ width: "90px" }} />
-                    <Box component="img" src={webNext} sx={{ width: "90px" }} />
-                    <Box component="img" src={webTs} sx={{ width: "90px" }} />
-                    <Box component="img" src={webV} sx={{ width: "90px" }} />
-
-                </FlexBox>
-                <FlexBox sx={{
-                    justifyContent: "center",
-                    gap: 2,
-                    py: 1,
-                    pb: 3
-                }}>
-                    <Box component="img" src={webT} sx={{ width: "90px" }} />
-                    <Box component="img" src={webJava} sx={{ width: "90px" }} />
-                    <Box component="img" src={webGraph} sx={{ width: "90px" }} />
-                    <Box component="img" src={webApi} sx={{ width: "90px" }} />
-                    <Box component="img" src={webCmsIcon} sx={{ width: "90px" }} />
-                </FlexBox>
+                <Box>
+                    <TechnologyIcons
+                        items={[
+                            { iconImg: webHtml },
+                            { iconImg: webCss },
+                            { iconImg: webJs },
+                            { iconImg: s9 },
+                            { iconImg: webNext },
+                            { iconImg: webTs },
+                            { iconImg: webV },
+                        ]}
+                    />
+                </Box>
+                <Box>
+                    <TechnologyIcons
+                        items={[
+                            { iconImg: webT },
+                            { iconImg: webJava },
+                            { iconImg: webGraph },
+                            { iconImg: webApi },
+                            { iconImg: webCmsIcon },
+                        ]}
+                    />
+                </Box>
+                
                 <Typography variant='h2' textAlign="center" >
                     Contentful, Sanity
                 </Typography>
-                <FlexBox sx={{
-                    justifyContent: "center",
-                    gap: 2,
-                    py: 3
-                }}>
-                    <Box component="img" src={webShopify} sx={{ width: "90px" }} />
-                    <Box component="img" src={webVercel} sx={{ width: "90px" }} />
-                    <Box component="img" src={webNetlify} sx={{ width: "90px" }} />
-                    <Box component="img" src={webCF} sx={{ width: "90px" }} />
-                    <Box component="img" src={webJest} sx={{ width: "90px" }} />
-                    <Box component="img" src={webPW} sx={{ width: "90px" }} />
-                </FlexBox>
+                <Box>
+                    <TechnologyIcons
+                        items={[
+                            { iconImg: webShopify },
+                            { iconImg: webVercel },
+                            { iconImg: webNetlify },
+                            { iconImg: webCF },
+                            { iconImg: webJest },
+                            { iconImg: webPW },
+                        ]}
+                    />
+                </Box>
+                
             </BoxBg>
             <FlexBox sx={{
                 gap: { xs: 3, md: 17 },

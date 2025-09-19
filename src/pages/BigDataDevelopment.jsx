@@ -1,5 +1,5 @@
 import React from 'react'
-import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage } from '../component'
+import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage, TechnologyIcons } from '../component'
 import { Box, Button, Divider, Typography } from '@mui/material'
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { appoachImg, bigDataApproach, bigDataArchitecture, bigDataAssessment, bigDataBI, bigDataELT, bigDataFirst, bigDataGovernance, bigDataImplementation, bigDataInstrumentation, bigDataMLOps, bigDataOperate, bigDataOutcome1, bigDataOutcome2, bigDataPlatform, bigDataScale, bigDataStreaming, bigDataTech1, bigDataTech10, bigDataTech11, bigDataTech12, bigDataTech13, bigDataTech14, bigDataTech15, bigDataTech2, bigDataTech3, bigDataTech4, bigDataTech5, bigDataTech6, bigDataTech7, bigDataTech8, bigDataTech9, bigDataWhyChoose, secondBg, techBg, } from '../assets/service/serviceInnerPages';
@@ -291,36 +291,38 @@ const BigDataDevelopment = () => {
                 <Typography variant='h2' textAlign="center" pb="15px" >
                     Technologies we use
                 </Typography>
-                <FlexBox sx={{
-                    justifyContent: "center",
-                    gap: 2,
-                    py: 2
-                }}>
-                    <Box component="img" src={bigDataTech1} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech2} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech3} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech4} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech5} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech6} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech7} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech8} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech9} sx={{ width: "90px" }} />
 
-                </FlexBox>
-                <FlexBox sx={{
-                    justifyContent: "center",
-                    gap: 2,
-                    py: 1,
-                    pb: 3
-                }}>
-                    <Box component="img" src={bigDataTech10} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech11} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech12} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech13} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech14} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech15} sx={{ width: "90px" }} />
-                </FlexBox>
+                <Box>
 
+                    <TechnologyIcons
+                        items={[
+                            { iconImg: bigDataTech1 },
+                            { iconImg: bigDataTech2 },
+                            { iconImg: bigDataTech3 },
+                            { iconImg: bigDataTech4 },
+                            { iconImg: bigDataTech5 },
+                            { iconImg: bigDataTech6 },
+                            { iconImg: bigDataTech7 },
+                            { iconImg: bigDataTech8 },
+                            { iconImg: bigDataTech9 },
+                            
+                        ]}
+                    />
+                </Box>
+                <Box>
+
+                    <TechnologyIcons
+                        items={[
+                            { iconImg: bigDataTech10 },                            
+                            { iconImg: bigDataTech11 },                            
+                            { iconImg: bigDataTech12 },                            
+                            { iconImg: bigDataTech13 },                            
+                            { iconImg: bigDataTech14 },                            
+                            { iconImg: bigDataTech15 },                            
+                        ]}
+                    />
+                </Box>
+                
             </BoxBg>
             <FlexBox sx={{
                 gap: { xs: 3, md: 17 },

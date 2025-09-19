@@ -6,52 +6,10 @@ import approachBg from '../assets/service/serviceBg.jpg'
 import faqImage from "../assets/faqimage.jpg";
 import formBg from "../assets/testimonialbg.webp";
 
-import {
-    InnerPageHeader,
-    FlexBox,
-    TextWithBorder,
-    BoxBg,
-    InnerPageTextImage,
-    HeadingWithSubheading,
-    IconWithInfo,
-    AccordionFaq,
-    AboutForm
-} from '../component';
+import { InnerPageHeader, FlexBox, TextWithBorder, BoxBg, InnerPageTextImage, HeadingWithSubheading, IconWithInfo, AccordionFaq, AboutForm, TechnologyIcons} from '../component';
 
 import {
-    firstImg,
-    secondBg,
-    whyChoose,
-    api,
-    data,
-    cloud,
-    migration,
-    sre,
-    mobile,
-    appoachImg,
-    discover,
-    build,
-    deploy,
-    validate,
-    improve,
-    design,
-    result1,
-    result2,
-    techBg,
-    s1,
-    s2,
-    s3,
-    s4,
-    s5,
-    s6,
-    s7,
-    s9,
-    s10,
-    s11,
-    s12,
-    s13,
-    s8,
-} from '../assets/service/serviceInnerPages';
+    firstImg, secondBg, whyChoose, api, data, cloud, migration, sre, mobile, appoachImg, discover, build, deploy, validate, improve, design, result1, result2, techBg, s1, s2, s3, s4, s5, s6, s7, s9, s10, s11, s12, s13, s8,} from '../assets/service/serviceInnerPages';
 
 
 const SoftwareDevelopment = () => {
@@ -414,32 +372,34 @@ const SoftwareDevelopment = () => {
                 <Typography variant='h2' textAlign="center" >
                     Technologies We Commonly Use
                 </Typography>
-                <FlexBox sx={{
-                    justifyContent: "center",
-                    gap: 2,
-                    py: 2
-                }}>
-                    <Box component="img" src={s1} sx={{ width: "90px" }} />
-                    <Box component="img" src={s2} sx={{ width: "90px" }} />
-                    <Box component="img" src={s3} sx={{ width: "90px" }} />
-                    <Box component="img" src={s4} sx={{ width: "90px" }} />
-                    <Box component="img" src={s5} sx={{ width: "90px" }} />
-                    <Box component="img" src={s6} sx={{ width: "90px" }} />
-                    <Box component="img" src={s7} sx={{ width: "90px" }} />
+                <Box>
 
-                </FlexBox>
-                <FlexBox sx={{
-                    justifyContent: "center",
-                    gap: 2,
-                    py: 1
-                }}>
-                    <Box component="img" src={s8} sx={{ width: "90px" }} />
-                    <Box component="img" src={s9} sx={{ width: "90px" }} />
-                    <Box component="img" src={s10} sx={{ width: "90px" }} />
-                    <Box component="img" src={s11} sx={{ width: "90px" }} />
-                    <Box component="img" src={s12} sx={{ width: "90px" }} />
-                    <Box component="img" src={s13} sx={{ width: "90px" }} />
-                </FlexBox>
+                <TechnologyIcons 
+                items={[
+                    {iconImg:s1},
+                    {iconImg:s2},
+                    {iconImg:s3},
+                    {iconImg:s4},
+                    {iconImg:s5},
+                    {iconImg:s6},
+                    {iconImg:s7},
+                ]}
+                /> 
+                </Box>
+                <Box>
+
+                <TechnologyIcons 
+                items={[
+                    {iconImg:s8},
+                    {iconImg:s9},
+                    {iconImg:s10},
+                    {iconImg:s11},
+                    {iconImg:s12},
+                    {iconImg:s13},
+                ]}
+                /> 
+                </Box>
+                
             </BoxBg>
 
             <Box

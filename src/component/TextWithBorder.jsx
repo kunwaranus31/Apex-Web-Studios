@@ -6,7 +6,14 @@ const TextWithBorder = ({ items }) => {
   return (
     <Box>
       {/* One flex container for all items */}
-      <FlexBox sx={{ display: "flex", flexWrap: "wrap", gap: 1}}>
+      <FlexBox sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        flexDirection: { sm: "column", md: "row" },
+        gap: 1,
+        px:0
+
+      }}>
         {items.map((item, index) => (
           <Box
             key={index}
