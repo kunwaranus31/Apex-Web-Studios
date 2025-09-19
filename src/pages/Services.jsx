@@ -1,47 +1,11 @@
 import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
-
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-// import service2 from '../assets/service/service-sec2.webp'
 
-// import devops from '../assets/service/service-devops.png'
-// import bigdata from '../assets/service/service-bigData.png'
-// import ml from '../assets/service/service-ML.png'
-// import web from '../assets/service/service-web.png'
-// import mobile from '../assets/service/service-mobile.png'
-// import partner from '../assets/service/service-partner-bg.jpg'
-
-// import why from '../assets/service/service-why.png'
-// import enterprise from '../assets/service/service-enterprise.png'
-// import cloud from '../assets/service/service-cloud.png'
-// import ctaBg from '../assets/service/service-ctaBg.png'
+import {service, service2, software, devops, ml, web, mobile, partner, bigdata, why, enterprise, serviceCloud, ctaBg,} from '../assets/';
 
 import {
-    service,
-    service2,
-    software,
-    devops,
-    ml,
-    web,
-    mobile,
-    partner,
-    bigdata,
-    why,
-    enterprise,
-    serviceCloud,
-    ctaBg,
-} from '../assets/';
-
-import {
-    InnerPageHeader,
-    BoxBg,
-    FlexBox,
-    HeadingWithSubheading,
-    IconWithInfo,
-    ValueSection,
-    HeadingInfo,
-
-} from '../component'
+    InnerPageHeader, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, ValueSection, HeadingInfo,} from '../component'
 import { Link } from 'react-router-dom';
 
 const Services = () => {

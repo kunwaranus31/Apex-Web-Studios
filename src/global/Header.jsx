@@ -11,6 +11,7 @@ import {
   Menu,
   MenuItem,
   Collapse,
+  Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -101,23 +102,26 @@ const Header = () => {
           {/* Services: link + separate dropdown trigger (desktop) */}
           <li style={{ display: "flex", alignItems: "center", gap: 4 }}>
             {/* Pure link — always navigates */}
-            <Button
+            <Typography
               component={Link}
               to="/services"
               color="inherit"
               variant="text"
               sx={{
+                textDecoration: "none",
                 p: 0,
                 minWidth: 0,
                 textTransform: "none",
                 fontWeight: 500,
                 fontSize: { md: "0.95rem", lg: "1rem" },
                 lineHeight: 1.2,
-                "&:hover": { backgroundColor: "transparent" },
+                // "&:hover": { backgroundColor: "transparent" },
+
+
               }}
             >
               Services
-            </Button>
+            </Typography>
 
             {/* Arrow only controls the dropdown */}
             <IconButton

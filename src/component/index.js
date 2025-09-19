@@ -21,3 +21,4 @@ export { default as Team } from './Team';
 export { default as Testimonial } from './Testimonial';
 export { default as TextWithBorder } from './TextWithBorder';
 export { default as ValueSection } from './ValueSection';
+export { default as HomeFirstSec } from './HomeFirstSec';

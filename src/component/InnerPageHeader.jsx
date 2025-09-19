@@ -1,5 +1,5 @@
-import { Box, Breadcrumbs, Link, Typography } from '@mui/material'
-import React from 'react'
+import { Box, Typography } from '@mui/material';
+import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import HeaderImg from "../assets/innerpageheader.jpg";
 
@@ -10,6 +10,7 @@ const InnerPageHeader = ({ heading, crumbs = [] }) => {
   // Common link styles (unchanged)
   const linkSx = {
     color: "#000",
+    textDecoration: "none",         // replaces MUI Link's underline="none"
     "&:hover": { color: "primary.main" }
   };
 
@@ -39,24 +40,32 @@ const InnerPageHeader = ({ heading, crumbs = [] }) => {
                 const isLast = idx === crumbs.length - 1;
 
                 if (!isLast && (c.to || c.href)) {
-                  // Linked crumb (uses RouterLink when `to` is provided; falls back to `href`)
+                  // Linked crumb: internal uses RouterLink; external uses <a>
                   return (
                     <React.Fragment key={`${c.label}-${idx}`}>
-                      <Link
-                        underline='none'
-                        {...(c.to
-                          ? { component: RouterLink, to: c.to }
-                          : { href: c.href })}
-                        sx={linkSx}
-                      >
-                        {c.label}
-                      </Link>
+                      {c.to ? (
+                        <Box
+                          component={RouterLink}
+                          to={c.to}
+                          sx={linkSx}
+                        >
+                          {c.label}
+                        </Box>
+                      ) : (
+                        <Box
+                          component="a"
+                          href={c.href}
+                          sx={linkSx}
+                        >
+                          {c.label}
+                        </Box>
+                      )}
                       {" / "}
                     </React.Fragment>
                   );
                 }
 
-                // Last (current) crumb — styled as in your original code
+                // Last (current) crumb — same style as before
                 return (
                   <Box
                     key={`${c.label}-${idx}`}
@@ -69,15 +78,14 @@ const InnerPageHeader = ({ heading, crumbs = [] }) => {
               })}
             </>
           ) : (
-            // Fallback to your original single-level breadcrumb if no `crumbs` are passed
             <>
-              <Link
-                underline='none'
-                href="/"
+              <Box
+                component={RouterLink}
+                to="/"
                 sx={linkSx}
               >
                 Home
-              </Link>
+              </Box>
               {" / "}
               <Box
                 component="span"
@@ -91,6 +99,7 @@ const InnerPageHeader = ({ heading, crumbs = [] }) => {
       </Box>
     </Box>
   );
-}
+};
 
 export default InnerPageHeader;
+  
