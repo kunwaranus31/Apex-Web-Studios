@@ -103,6 +103,29 @@ export { default as bigDataTech13 } from './bigDataTech13.png';
 export { default as bigDataTech14 } from './bigDataTech14.png';
 export { default as bigDataTech15 } from './bigDataTech15.png';
 
+export { default as ai1 } from './ai1.png';
+export { default as ai2 } from './ai2.png';
+export { default as ai3 } from './ai3.png';
+export { default as ai4 } from './ai4.png';
+export { default as ai5 } from './ai5.png';
+export { default as ai6 } from './ai6.png';
+export { default as ai7 } from './ai7.png';
+export { default as ai8 } from './ai8.png';
+export { default as ai9 } from './ai9.png';
+export { default as ai10 } from './ai10.png';
+export { default as ai11 } from './ai11.png';
+export { default as ai12 } from './ai12.png';
+export { default as ai13 } from './ai13.png';
+export { default as ai14 } from './ai14.png';
+export { default as ai15 } from './ai15.png';
+export { default as ai16 } from './ai16.png';
+export { default as aiImg } from './aiImg.jpg';
+export { default as aiOutcome1 } from './aiOutcome1.jpg';
+export { default as aiOutcome2 } from './aiOutcome2.jpg';
+export { default as aiApproach } from './aiApproach.webp';
+
+
+
 export {
   firstImg,
   secondBg,

@@ -1,8 +1,8 @@
 import { Box, Button, Divider, Typography } from '@mui/material'
 import React from 'react'
-import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage } from '../component'
+import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage, TechnologyIcons } from '../component'
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { secondBg, techBg } from '../assets/service/serviceInnerPages';
+import { ai1, ai10, ai11, ai12, ai13, ai14, ai15, ai16, ai2, ai3, ai4, ai5, ai6, ai7, ai8, ai9, aiApproach, aiImg, aiOutcome1, aiOutcome2, s7, secondBg, techBg, webFAQ } from '../assets/service/serviceInnerPages';
 import approachBg from '../assets/service/serviceBg.jpg'
 import { formBg } from '../assets';
 
@@ -21,14 +21,14 @@ const AiDevelopment = () => {
                 display: "block",
                 py: 5
             }} >
-                {/* <Box
+                <Box
                     component="img"
-                    src={bigDataFirst}
+                    src={aiImg}
                     sx={{
                         width: "100%",
                         my: 2
                     }}
-                /> */}
+                />
                 <Typography variant='h1' sx={{
                     mb: 2
                 }} >
@@ -235,13 +235,13 @@ const AiDevelopment = () => {
                             hover={false}
                         />
                     </Box>
-                    {/* <Box
+                    <Box
                         component="img"
-                        src={bigDataApproach}
+                        src={aiApproach}
                         sx={{
                             width: { xs: "100%", lg: "500px" }
                         }}
-                    /> */}
+                    />
                     <Box>
                         <IconWithInfo
                             heading="Deploy"
@@ -289,13 +289,13 @@ const AiDevelopment = () => {
                 </Box>
                 <FlexBox>
                     <Box>
-                        {/* <Box
+                        <Box
                             component="img"
-                            src={bigDataOutcome1}
+                            src={aiOutcome1}
                             sx={{
                                 width: "100%"
                             }}
-                        /> */}
+                        />
                         <Typography
                             variant='h3'
                             textAlign="center"
@@ -319,13 +319,13 @@ const AiDevelopment = () => {
                         </Typography>
                     </Box>
                     <Box>
-                        {/* <Box
+                        <Box
                             component="img"
-                            src={bigDataOutcome2}
+                            src={aiOutcome2}
                             sx={{
                                 width: "100%"
                             }}
-                        /> */}
+                        />
                         <Typography
                             variant='h3'
                             textAlign="center"
@@ -339,7 +339,7 @@ const AiDevelopment = () => {
                             display="block"
 
                             sx={{
-                                width: { sm: "100%", md: "500px" }
+                                width: { sm: "100%", md: "540px" }
 
                             }}
                             justifySelf="center"
@@ -370,35 +370,38 @@ const AiDevelopment = () => {
                 <Typography variant='h2' textAlign="center" pb="15px" >
                     Technologies we use
                 </Typography>
-                <FlexBox sx={{
-                    justifyContent: "center",
-                    gap: 2,
-                    py: 2
-                }}>
-                    {/* <Box component="img" src={bigDataTech1} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech2} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech3} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech4} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech5} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech6} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech7} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech8} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech9} sx={{ width: "90px" }} /> */}
+                
+                <Box>
+                    <TechnologyIcons
+                    items={[
+                        {iconImg:ai1},
+                        {iconImg:ai2},
+                        {iconImg:ai3},
+                        {iconImg:ai4},
+                        {iconImg:ai5},
+                        {iconImg:ai6},
+                        {iconImg:ai7},
+                        {iconImg:ai8},
+                        {iconImg:ai9},
+                    ]}
+                    />
+                </Box>
 
-                </FlexBox>
-                <FlexBox sx={{
-                    justifyContent: "center",
-                    gap: 2,
-                    py: 1,
-                    pb: 3
-                }}>
-                    {/* <Box component="img" src={bigDataTech10} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech11} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech12} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech13} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech14} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech15} sx={{ width: "90px" }} /> */}
-                </FlexBox>
+                <Box>
+                    <TechnologyIcons
+                    items={[
+                        {iconImg:ai10},
+                        {iconImg:ai11},
+                        {iconImg:s7},
+                        {iconImg:ai12},
+                        {iconImg:ai13},
+                        {iconImg:ai14},
+                        {iconImg:ai15},
+                        {iconImg:ai16},
+                    ]}
+                    />
+                </Box>
+                
             </BoxBg>
             <FlexBox sx={{
                 gap: { xs: 3, md: 17 },
@@ -427,12 +430,12 @@ const AiDevelopment = () => {
                     />
                 </Box>
                 <Box>
-                    {/* <Box
+                    <Box
                         component="img"
-                        src={appoachImg}
+                        src={webFAQ}
                         width="100%"
 
-                    /> */}
+                    />
                 </Box>
             </FlexBox>
             <BoxBg bgImage={formBg} sx={{ pt: 9, pb: 3, my: 7 }} >

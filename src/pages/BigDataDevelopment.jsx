@@ -104,7 +104,78 @@ const BigDataDevelopment = () => {
                     rowDirection="row-reverse"
                 />
             </BoxBg>
+            <Box sx={{
+                py: 12
+            }}>
+                <HeadingWithSubheading
+                    subheading="LodaTech Offer"
+                    heading="Core offerings
+"
+                    align="center"
+                />
 
+                <FlexBox sx={{
+                    justifyContent: "center",
+                    pt: 4,
+                    gap: 2
+                }}>
+                    <IconWithInfo
+                        heading="Data Platform Architecture "
+                        info="Blueprints for data lakes, lakehouses and analytics-ready storage with governance, lineage and access controls."
+                        infoWidth="325px"
+                        textImage={bigDataArchitecture}
+                        imageWidth="55px"
+                        textClr="#000"
+
+                    />
+                    <IconWithInfo
+                        heading="Streaming & Event Platforms"
+                        info="High-throughput Kafka platforms, stream-processing (Kafka Streams, Flink) and end-to-end observability for real-time use cases."
+                        infoWidth="325px"
+                        textImage={bigDataStreaming}
+                        imageWidth="55px"
+                        textClr="#000"
+                    />
+                    <IconWithInfo
+                        heading="Batch Processing & ETL/ELT"
+                        info="Robust ETL pipelines using Spark, Databricks or native cloud services for scheduled, large-scale processing"
+                        infoWidth="315px"
+                        textImage={bigDataELT}
+                        imageWidth="55px"
+                        textClr="#000"
+                    />
+                </FlexBox>
+                <FlexBox sx={{
+                    justifyContent: "center",
+                    pt: 3,
+                    gap: 2
+                }}>
+                    <IconWithInfo
+                        heading="Data Governance & Quality"
+                        info="Automated quality checks, schema evolution strategies and data contracts to reduce downstream errors."
+                        infoWidth="325px"
+                        textImage={bigDataGovernance}
+                        imageWidth="55px"
+                        textClr="#000"
+                    />
+                    <IconWithInfo
+                        heading="MLOps & Model Pipelines"
+                        info="Production-ready training & deployment pipelines, model registry and reproducible feature stores."
+                        infoWidth="320px"
+                        textImage={bigDataMLOps}
+                        imageWidth="55px"
+                        textClr="#000"
+                    />
+                    <IconWithInfo
+                        heading="Analytics & BI Enablement"
+                        info="Data marts, dashboards and self-serve analytics that empower product and business teams."
+                        infoWidth="325px"
+                        textImage={bigDataBI}
+                        imageWidth="55px"
+                        textClr="#000"
+                    />
+                </FlexBox>
+            </Box>
             <BoxBg
                 bgImage={approachBg}
                 sx={{
@@ -305,7 +376,7 @@ const BigDataDevelopment = () => {
                             { iconImg: bigDataTech7 },
                             { iconImg: bigDataTech8 },
                             { iconImg: bigDataTech9 },
-                            
+
                         ]}
                     />
                 </Box>
@@ -313,16 +384,18 @@ const BigDataDevelopment = () => {
 
                     <TechnologyIcons
                         items={[
-                            { iconImg: bigDataTech10 },                            
-                            { iconImg: bigDataTech11 },                            
-                            { iconImg: bigDataTech12 },                            
-                            { iconImg: bigDataTech13 },                            
-                            { iconImg: bigDataTech14 },                            
-                            { iconImg: bigDataTech15 },                            
+                            { iconImg: bigDataTech10 },
+                            { iconImg: bigDataTech11 },
+                            { iconImg: bigDataTech12 },
+                            { iconImg: bigDataTech13 },
+                            { iconImg: bigDataTech14 },
+                            { iconImg: bigDataTech15 },
                         ]}
                     />
                 </Box>
-                
+
+
+
             </BoxBg>
             <FlexBox sx={{
                 gap: { xs: 3, md: 17 },
