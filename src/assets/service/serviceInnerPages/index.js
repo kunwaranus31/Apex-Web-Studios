@@ -123,6 +123,66 @@ export { default as aiImg } from './aiImg.jpg';
 export { default as aiOutcome1 } from './aiOutcome1.jpg';
 export { default as aiOutcome2 } from './aiOutcome2.jpg';
 export { default as aiApproach } from './aiApproach.webp';
+export { default as aiService1 } from './aiService1.png';
+export { default as aiService2 } from './aiService2.png';
+export { default as aiService3 } from './aiService3.png';
+export { default as aiService4 } from './aiService4.png';
+export { default as aiService5 } from './aiService5.png';
+export { default as aiService6 } from './aiService6.png';
+export { default as aiApproach1 } from './aiApproach1.png';
+export { default as aiApproach2 } from './aiApproach2.png';
+export { default as aiApproach3 } from './aiApproach3.png';
+export { default as aiApproach4 } from './aiApproach4.png';
+export { default as aiApproach5 } from './aiApproach5.png';
+export { default as aiApproach6 } from './aiApproach6.png';
+
+
+
+export { default as dev1 } from './dev1.png';
+export { default as dev2 } from './dev2.png';
+export { default as dev3 } from './dev3.png';
+export { default as dev4 } from './dev4.png';
+export { default as dev5 } from './dev5.png';
+export { default as dev6 } from './dev6.png';
+export { default as dev7 } from './dev7.png';
+export { default as dev8 } from './dev8.png';
+export { default as dev9 } from './dev9.png';
+export { default as dev11 } from './dev11.png';
+export { default as dev12 } from './dev12.png';
+export { default as dev13 } from './dev13.png';
+export { default as dev14 } from './dev14.png';
+export { default as dev10 } from './dev10.png';
+export { default as devOpsImg } from './devOpsImg.jpg';
+export { default as devOutcomes1 } from './devOutcomes1.jpg';
+export { default as devOutcomes2 } from './devOutcomes2.jpg';
+export { default as devService1 } from './devService1.png';
+export { default as devService2 } from './devService2.png';
+export { default as devService3 } from './devService3.png';
+export { default as devService4 } from './devService4.png';
+export { default as devService5 } from './devService5.png';
+export { default as devService6 } from './devService6.png';
+export { default as devWork1 } from './devWork1.png';
+export { default as devWork2 } from './devWork2.png';
+export { default as devWork3 } from './devWork3.png';
+export { default as devWork4 } from './devWork4.png';
+export { default as devWork5 } from './devWork5.png';
+export { default as devWork6 } from './devWork6.png';
+export { default as devApproachImg } from './devApproachImg.png';
+export { default as devWhyImg } from './devWhyImg.png';
+
+
+export { default as mobileOffer1 } from './mobileOffer1.png';
+export { default as mobileOffer2 } from './mobileOffer2.png';
+export { default as mobileOffer3 } from './mobileOffer3.png';
+export { default as mobileOffer4 } from './mobileOffer4.png';
+export { default as mobileOffer5 } from './mobileOffer5.png';
+export { default as mobileOffer6 } from './mobileOffer6.png';
+export { default as mobileApproach1 } from './mobileApproach1.png';
+export { default as mobileApproach2 } from './mobileApproach2.png';
+export { default as mobileApproach3 } from './mobileApproach3.png';
+export { default as mobileApproach4 } from './mobileApproach4.png';
+export { default as mobileApproach5 } from './mobileApproach5.png';
+export { default as mobileApproach6 } from './mobileApproach6.png';
 
 
 

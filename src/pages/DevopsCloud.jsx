@@ -1,8 +1,8 @@
 import { Box, Button, Divider, Typography } from '@mui/material'
 import React from 'react'
-import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage } from '../component'
+import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage, TechnologyIcons } from '../component'
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { secondBg, techBg } from '../assets/service/serviceInnerPages';
+import { ai15, ai16, ai2, appoachImg, bigDataTech15, dev1, dev10, dev11, dev12, dev13, dev14, dev2, dev3, dev4, dev5, dev6, dev7, dev8, dev9, devApproachImg, devOpsImg, devOutcomes1, devOutcomes2, devService1, devService2, devService3, devService4, devService5, devService6, devWhyImg, devWork1, devWork2, devWork3, devWork4, devWork5, devWork6, s7, s8, secondBg, techBg } from '../assets/service/serviceInnerPages';
 import approachBg from '../assets/service/serviceBg.jpg'
 import { formBg } from '../assets';
 
@@ -21,14 +21,14 @@ const DevopsCloud = () => {
                 display: "block",
                 py: 5
             }} >
-                {/* <Box
+                <Box
                     component="img"
-                    src={bigDataFirst}
+                    src={devOpsImg}
                     sx={{
                         width: "100%",
                         my: 2
                     }}
-                /> */}
+                />
                 <Typography variant='h1' sx={{
                     mb: 2
                 }} >
@@ -98,7 +98,7 @@ const DevopsCloud = () => {
                 <InnerPageTextImage
                     subheading="Why Choose Lodatech"
                     heading="Why Lodatech for DevOps"
-                    // image={bigDataWhyChoose}
+                    image={devWhyImg}
                     imageWidth='550px'
                     contentjustify="space-between"
                     items={[
@@ -129,7 +129,7 @@ const DevopsCloud = () => {
                         heading="CI/CD & Release Engineering"
                         info="Design and implement pipelines (GitLab CI, GitHub Actions, Jenkins) for fast, safe delivery: linting, unit & integration tests, canary releases and rollback strategies."
                         infoWidth="325px"
-                        // textImage={bigDataArchitecture}
+                        textImage={devService1}
                         imageWidth="55px"
                         textClr="#000"
 
@@ -138,7 +138,7 @@ const DevopsCloud = () => {
                         heading="Cloud Migrations & Platform"
                         info="Lift-and-shift to cloud providers, containerization, Kubernetes (GKE/EKS/AKS) platform design and multi-account strategies for security and scale."
                         infoWidth="325px"
-                        // textImage={bigDataStreaming}
+                        textImage={devService2}
                         imageWidth="55px"
                         textClr="#000"
                     />
@@ -146,7 +146,7 @@ const DevopsCloud = () => {
                         heading="SRE & Reliability Engineering"
                         info="SLA/SLO design, error budgets, incident response runbooks and chaos testing to proactively improve uptime and recovery."
                         infoWidth="315px"
-                        // textImage={bigDataELT}
+                        textImage={devService3}
                         imageWidth="55px"
                         textClr="#000"
                     />
@@ -160,7 +160,7 @@ const DevopsCloud = () => {
                         heading="Infrastructure as Code"
                         info="Terraform, Helm and cloud-native templates for repeatable, auditable infrastructure deployments and environment parity."
                         infoWidth="325px"
-                        // textImage={bigDataGovernance}
+                        textImage={devService4}
                         imageWidth="55px"
                         textClr="#000"
                     />
@@ -168,7 +168,7 @@ const DevopsCloud = () => {
                         heading="Observability & Monitoring"
                         info="Metrics, tracing and structured logging (Prometheus, Grafana, OpenTelemetry) to detect issues early and reduce time-to-resolution."
                         infoWidth="325px"
-                        // textImage={bigDataMLOps}
+                        textImage={devService5}
                         imageWidth="55px"
                         textClr="#000"
                     />
@@ -176,7 +176,7 @@ const DevopsCloud = () => {
                         heading="DevSecOps & Compliance"
                         info="Security automation (IaC scanning, secret management, container scanning), threat modeling and compliance pipelines to reduce risk."
                         infoWidth="320px"
-                        // textImage={bigDataBI}
+                        textImage={devService6}
                         imageWidth="55px"
                         textClr="#000"
                     />
@@ -211,7 +211,7 @@ const DevopsCloud = () => {
                             heading="Assess"
                             info="Audit pipelines, infra, runbooks, costs and security posture."
                             infoWidth="320px"
-                            // textImage={bigDataAssessment}
+                            textImage={devWork1}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -221,7 +221,7 @@ const DevopsCloud = () => {
                             heading="Plan"
                             info="Prioritize quick wins and platform initiatives with measurable KPIs."
                             infoWidth="330px"
-                            // textImage={bigDataPlatform}
+                            textImage={devWork2}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -231,26 +231,26 @@ const DevopsCloud = () => {
                             heading="Automate"
                             info="Implement CI/CD, IaC, configuration and self-service tooling."
                             infoWidth="320px"
-                            // textImage={bigDataImplementation}
+                            textImage={devWork3}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
                             hover={false}
                         />
                     </Box>
-                    {/* <Box
+                    <Box
                         component="img"
-                        src={bigDataApproach}
+                        src={devApproachImg}
                         sx={{
                             width: { xs: "100%", lg: "500px" }
                         }}
-                    /> */}
+                    />
                     <Box>
                         <IconWithInfo
                             heading="Instrument"
                             info="Add metrics, tracing, log aggregation and alerting for key signals."
                             infoWidth="310px"
-                            // textImage={bigDataInstrumentation}
+                            textImage={devWork4}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -260,7 +260,7 @@ const DevopsCloud = () => {
                             heading="Harden"
                             info="Implement SRE practices, chaos experiments and security automation."
                             infoWidth="320px"
-                            // textImage={bigDataOperate}
+                            textImage={devWork5}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -270,7 +270,7 @@ const DevopsCloud = () => {
                             heading="Operate & Transfer"
                             info="Run, optimize and train your teams for autonomous operations."
                             infoWidth="320px"
-                            // textImage={bigDataScale}
+                            textImage={devWork6}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -292,13 +292,13 @@ const DevopsCloud = () => {
                 </Box>
                 <FlexBox>
                     <Box>
-                        {/* <Box
+                        <Box
                             component="img"
-                            src={bigDataOutcome1}
+                            src={devOutcomes1}
                             sx={{
                                 width: "100%"
                             }}
-                        /> */}
+                        />
                         <Typography
                             variant='h3'
                             textAlign="center"
@@ -321,13 +321,13 @@ const DevopsCloud = () => {
                         </Typography>
                     </Box>
                     <Box>
-                        {/* <Box
+                        <Box
                             component="img"
-                            src={bigDataOutcome2}
+                            src={devOutcomes2}
                             sx={{
                                 width: "100%"
                             }}
-                        /> */}
+                        />
                         <Typography
                             variant='h3'
                             textAlign="center"
@@ -373,35 +373,37 @@ const DevopsCloud = () => {
                 <Typography variant='h2' textAlign="center" pb="15px" >
                     Tools & platforms we work with
                 </Typography>
-                <FlexBox sx={{
-                    justifyContent: "center",
-                    gap: 2,
-                    py: 2
-                }}>
-                    {/* <Box component="img" src={bigDataTech1} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech2} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech3} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech4} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech5} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech6} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech7} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech8} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech9} sx={{ width: "90px" }} /> */}
-
-                </FlexBox>
-                <FlexBox sx={{
-                    justifyContent: "center",
-                    gap: 2,
-                    py: 1,
-                    pb: 3
-                }}>
-                    {/* <Box component="img" src={bigDataTech10} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech11} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech12} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech13} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech14} sx={{ width: "90px" }} />
-                    <Box component="img" src={bigDataTech15} sx={{ width: "90px" }} /> */}
-                </FlexBox>
+                <Box>
+                    <TechnologyIcons
+                    items={[
+                        {iconImg:s8},
+                        {iconImg:dev1},
+                        {iconImg:dev2},
+                        {iconImg:dev3},
+                        {iconImg:dev4},
+                        {iconImg:dev5},
+                        {iconImg:dev6},
+                        {iconImg:dev7},
+                        {iconImg:ai15},
+                    ]}
+                    />
+                </Box>
+                <Box>
+                    <TechnologyIcons
+                    items={[
+                        {iconImg:ai16},
+                        {iconImg:dev8},
+                        {iconImg:dev9},
+                        {iconImg:dev10},
+                        {iconImg:s7},
+                        {iconImg:dev11},
+                        {iconImg:dev12},
+                        {iconImg:dev13},
+                        {iconImg:dev14},
+                    ]}
+                    />
+                </Box>
+                
             </BoxBg>
             <FlexBox sx={{
                 gap: { xs: 3, md: 17 },
@@ -430,12 +432,12 @@ const DevopsCloud = () => {
                     />
                 </Box>
                 <Box>
-                    {/* <Box
+                    <Box
                         component="img"
                         src={appoachImg}
                         width="100%"
 
-                    /> */}
+                    />
                 </Box>
             </FlexBox>
             <BoxBg bgImage={formBg} sx={{ pt: 9, pb: 3, my: 7 }} >

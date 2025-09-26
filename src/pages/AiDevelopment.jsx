@@ -2,7 +2,7 @@ import { Box, Button, Divider, Typography } from '@mui/material'
 import React from 'react'
 import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage, TechnologyIcons } from '../component'
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { ai1, ai10, ai11, ai12, ai13, ai14, ai15, ai16, ai2, ai3, ai4, ai5, ai6, ai7, ai8, ai9, aiApproach, aiImg, aiOutcome1, aiOutcome2, s7, secondBg, techBg, webFAQ } from '../assets/service/serviceInnerPages';
+import { ai1, ai10, ai11, ai12, ai13, ai14, ai15, ai16, ai2, ai3, ai4, ai5, ai6, ai7, ai8, ai9, aiApproach, aiApproach1, aiApproach2, aiApproach3, aiApproach4, aiApproach5, aiApproach6, aiImg, aiOutcome1, aiOutcome2, aiService1, aiService2, aiService3, aiService4, aiService5, aiService6, s7, secondBg, techBg, webFAQ } from '../assets/service/serviceInnerPages';
 import approachBg from '../assets/service/serviceBg.jpg'
 import { formBg } from '../assets';
 
@@ -126,7 +126,7 @@ const AiDevelopment = () => {
                         heading="AI Strategy & Roadmaps"
                         info="Use-case prioritization, ROI mapping and roadmap to move from experiments to production."
                         infoWidth="325px"
-                        // textImage={bigDataArchitecture}
+                        textImage={aiService1}
                         imageWidth="55px"
                         textClr="#000"
 
@@ -135,7 +135,7 @@ const AiDevelopment = () => {
                         heading="Model Development"
                         info="Prototyping and production model development (classification, regression, time-series, recommender systems, NLP)."
                         infoWidth="325px"
-                        // textImage={bigDataStreaming}
+                        textImage={aiService2}
                         imageWidth="55px"
                         textClr="#000"
                     />
@@ -143,7 +143,7 @@ const AiDevelopment = () => {
                         heading="Responsible AI & Governance"
                         info="Bias assessment, explainability (SHAP/LIME), model risk documentation and audit-ready pipelines."
                         infoWidth="315px"
-                        // textImage={bigDataELT}
+                        textImage={aiService3}
                         imageWidth="55px"
                         textClr="#000"
                     />
@@ -157,7 +157,7 @@ const AiDevelopment = () => {
                         heading="Data Preparation & Feature Engineering"
                         info="Data labeling, cleaning, feature stores and pipelines to produce reproducible training data."
                         infoWidth="325px"
-                        // textImage={bigDataGovernance}
+                        textImage={aiService4}
                         imageWidth="55px"
                         textClr="#000"
                     />
@@ -165,7 +165,7 @@ const AiDevelopment = () => {
                         heading="MLOps & Model Serving"
                         info="CI for ML, model registries, automated retraining pipelines and scalable model serving (batch & real-time)."
                         infoWidth="325px"
-                        // textImage={bigDataMLOps}
+                        textImage={aiService5}
                         imageWidth="55px"
                         textClr="#000"
                     />
@@ -173,7 +173,7 @@ const AiDevelopment = () => {
                         heading="Monitoring & Continuous Improvement"
                         info="Model performance monitoring, drift detection, labeling feedback loops and periodic retraining strategies."
                         infoWidth="320px"
-                        // textImage={bigDataBI}
+                        textImage={aiService6}
                         imageWidth="55px"
                         textClr="#000"
                     />
@@ -208,7 +208,7 @@ const AiDevelopment = () => {
                             heading="Identify & prioritize"
                             info="Business goals, success metrics and data readiness assessment."
                             infoWidth="320px"
-                            // textImage={bigDataAssessment}
+                            textImage={aiApproach1}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -218,7 +218,7 @@ const AiDevelopment = () => {
                             heading="Experiment"
                             info="Rapid prototyping to validate feasibility and expected impact."
                             infoWidth="330px"
-                            // textImage={bigDataPlatform}
+                            textImage={aiApproach2}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -228,7 +228,7 @@ const AiDevelopment = () => {
                             heading="Engineer"
                             info="Data pipelines, feature stores and robust training pipelines."
                             infoWidth="320px"
-                            // textImage={bigDataImplementation}
+                            textImage={aiApproach3}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -247,7 +247,7 @@ const AiDevelopment = () => {
                             heading="Deploy"
                             info="Scalable serving (batch or real-time), model registry and rollout strategy."
                             infoWidth="310px"
-                            // textImage={bigDataInstrumentation}
+                            textImage={aiApproach4}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -257,7 +257,7 @@ const AiDevelopment = () => {
                             heading="Monitor"
                             info="Drift detection, performance metrics and error analysis."
                             infoWidth="320px"
-                            // textImage={bigDataOperate}
+                            textImage={aiApproach5}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -267,7 +267,7 @@ const AiDevelopment = () => {
                             heading="Govern"
                             info="Versioning, audit logs and explainability reports for stakeholders and compliance."
                             infoWidth="320px"
-                            // textImage={bigDataScale}
+                            textImage={aiApproach6}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"

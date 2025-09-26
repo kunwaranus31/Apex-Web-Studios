@@ -2,7 +2,7 @@ import { Box, Button, Divider, Typography } from '@mui/material'
 import React from 'react'
 import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage } from '../component'
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { secondBg, techBg } from '../assets/service/serviceInnerPages';
+import { mobileApproach1, mobileApproach2, mobileApproach3, mobileApproach4, mobileApproach5, mobileApproach6, mobileOffer1, mobileOffer2, mobileOffer3, mobileOffer4, mobileOffer5, mobileOffer6, secondBg, techBg } from '../assets/service/serviceInnerPages';
 import approachBg from '../assets/service/serviceBg.jpg'
 import { formBg } from '../assets';
 
@@ -127,7 +127,7 @@ We design and build native and cross-platform mobile applications that focus on 
                         heading="Native iOS & Android"
                         info="Platform-first apps (Swift, Kotlin) when performance, device feature access and platform UX matter most."
                         infoWidth="325px"
-                        // textImage={bigDataArchitecture}
+                        textImage={mobileOffer1}
                         imageWidth="55px"
                         textClr="#000"
 
@@ -136,7 +136,7 @@ We design and build native and cross-platform mobile applications that focus on 
                         heading="Cross-platform (React Native / Flutter)"
                         info="Fast to market, cost-effective cross-platform apps with native-like performance and maintainable codebases."
                         infoWidth="325px"
-                        // textImage={bigDataStreaming}
+                        textImage={mobileOffer2}
                         imageWidth="55px"
                         textClr="#000"
                     />
@@ -144,7 +144,7 @@ We design and build native and cross-platform mobile applications that focus on 
                         heading="Mobile Backend & APIs"
                         info="Scalable APIs, authentication, push notifications and offline sync to support reliable mobile experiences."
                         infoWidth="315px"
-                        // textImage={bigDataELT}
+                        textImage={mobileOffer3}
                         imageWidth="55px"
                         textClr="#000"
                     />
@@ -158,7 +158,7 @@ We design and build native and cross-platform mobile applications that focus on 
                         heading="Product & UX for Mobile"
                         info="Research, flows, prototypes and design systems that prioritize accessibility and conversion on small screens."
                         infoWidth="325px"
-                        // textImage={bigDataGovernance}
+                        textImage={mobileOffer4}
                         imageWidth="55px"
                         textClr="#000"
                     />
@@ -166,7 +166,7 @@ We design and build native and cross-platform mobile applications that focus on 
                         heading="Quality & Testing"
                         info="Automated unit, integration and E2E tests (Detox, Appium), CI pipelines and device lab testing to reduce regressions."
                         infoWidth="325px"
-                        // textImage={bigDataMLOps}
+                        textImage={mobileOffer5}
                         imageWidth="55px"
                         textClr="#000"
                     />
@@ -174,7 +174,7 @@ We design and build native and cross-platform mobile applications that focus on 
                         heading="App Store & Release Management"
                         info="App Store / Play Store submissions, beta distribution, release notes and rollout strategies for safe launches."
                         infoWidth="320px"
-                        // textImage={bigDataBI}
+                        textImage={mobileOffer6}
                         imageWidth="55px"
                         textClr="#000"
                     />
@@ -209,7 +209,7 @@ From concept to app store — iterative, measurable and focused on user value.
                             heading="Discovery & product goals"
                             info="User research, KPI definition and platform choice."
                             infoWidth="320px"
-                            // textImage={bigDataAssessment}
+                            textImage={mobileApproach1}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -219,7 +219,7 @@ From concept to app store — iterative, measurable and focused on user value.
                             heading="Prototype"
                             info="Clickable prototypes and early usability tests to validate assumptions."
                             infoWidth="330px"
-                            // textImage={bigDataPlatform}
+                            textImage={mobileApproach2}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -229,7 +229,7 @@ From concept to app store — iterative, measurable and focused on user value.
                             heading="Build"
                             info="Modular app architecture, automated tests, CI and feature-flagged releases."
                             infoWidth="320px"
-                            // textImage={bigDataImplementation}
+                            textImage={mobileApproach3}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -248,7 +248,7 @@ From concept to app store — iterative, measurable and focused on user value.
                             heading="Q/A & device testing "
                             info="Real-device testing, performance profiling and security checks."
                             infoWidth="310px"
-                            // textImage={bigDataInstrumentation}
+                            textImage={mobileApproach4}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -258,7 +258,7 @@ From concept to app store — iterative, measurable and focused on user value.
                             heading="Launch"
                             info="Store submission, phased rollout and monitoring setup."
                             infoWidth="320px"
-                            // textImage={bigDataOperate}
+                            textImage={mobileApproach5}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
@@ -268,7 +268,7 @@ From concept to app store — iterative, measurable and focused on user value.
                             heading="Operate & iterate"
                             info="Crash analysis, analytics-driven improvements and roadmap planning."
                             infoWidth="320px"
-                            // textImage={bigDataScale}
+                            textImage={mobileApproach6}
                             imageWidth="55px"
                             textClr="#000"
                             fontsize="14px"
