@@ -2,7 +2,7 @@ import { Box, Button, Divider, Typography } from '@mui/material'
 import React from 'react'
 import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage, TechnologyIcons } from '../component'
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { ai15, ai16, ai2, appoachImg, bigDataTech15, dev1, dev10, dev11, dev12, dev13, dev14, dev2, dev3, dev4, dev5, dev6, dev7, dev8, dev9, devApproachImg, devOpsImg, devOutcomes1, devOutcomes2, devService1, devService2, devService3, devService4, devService5, devService6, devWhyImg, devWork1, devWork2, devWork3, devWork4, devWork5, devWork6, s7, s8, secondBg, techBg } from '../assets/service/serviceInnerPages';
+import { ai15, ai16, ai2, appoachImg, bigDataTech15, dev1, dev10, dev11, dev12, dev13, dev14, dev2, dev3, dev4, dev5, dev6, dev7, dev8, dev9, devApproachImg, devOpsImg, devOutcomes1, devOutcomes2, devPettern1, devPettern2, devPettern3, devPettern4, devService1, devService2, devService3, devService4, devService5, devService6, devWhyImg, devWork1, devWork2, devWork3, devWork4, devWork5, devWork6, s7, s8, secondBg, techBg } from '../assets/service/serviceInnerPages';
 import approachBg from '../assets/service/serviceBg.jpg'
 import { formBg } from '../assets';
 
@@ -279,6 +279,110 @@ const DevopsCloud = () => {
                     </Box>
                 </FlexBox>
             </BoxBg>
+            <Box sx={{
+        pt:7
+      }} >
+        <Typography variant="h2" textAlign="center" sx={{ pb:1 }}>
+        Recommended patterns & examples
+        </Typography>
+        <Typography textAlign="center" sx={{ pb:3 }}>
+        Examples of practical patterns we implement to achieve resilience and developer velocity:
+        </Typography>
+        <FlexBox sx={{
+            justifyContent:"center"
+        }}>
+          <IconWithInfo
+            heading="GitOps:"
+            info="Declarative clusters and automated reconciliation for predictable deployments."
+            infoWidth="280px"
+            textImage={devPettern1}
+            imageWidth="55px"
+            textClr="#565656"
+            fontsize="14px"
+            display="block"
+          />
+          <IconWithInfo
+            heading="Blue/Green & Canary:"
+            info="Safer rollouts with traffic shifting and automated rollbacks."
+            infoWidth="240px"
+            textImage={devPettern2}
+            imageWidth="55px"
+            textClr="#565656"
+            fontsize="14px"
+            display="block"
+          />
+          <IconWithInfo
+            heading="Feature flags:"
+            info="Progressive releases, A/B testing and risk mitigation."
+            infoWidth="220px"
+            textImage={devPettern3}
+            imageWidth="55px"
+            textClr="#565656"
+            fontsize="14px"
+            display="block"
+          />
+          <IconWithInfo
+            heading="Immutable Infrastructure:"
+            info="Replace, don't patch — easier rollbacks and consistent drift avoidance."
+            infoWidth="260px"
+            textImage={devPettern4}
+            imageWidth="55px"
+            textClr="#565656"
+            fontsize="14px"
+            display="block"
+          />
+        </FlexBox>
+        <Box>
+        <Typography variant="h2" textAlign="center" sx={{ pb:3,pt:5 }}>
+        Sample CI snippet (concept)
+        </Typography>
+        </Box>
+        <FlexBox sx={{
+            background:"#000000",
+            borderRadius:3
+        }} >
+            <Box sx={{
+                p:4,
+            }}>
+                <Typography color="#CAF7FF">
+                # Build -&gt; Test -&gt; Containerize -&gt; Publish Deploy -&gt; (canary)
+                </Typography>
+                <Typography color="#CAF7FF">
+                Stages:
+                </Typography>
+                
+                <Typography color="#CAF7FF" pl="20px">
+                - Build
+                </Typography>
+                <Typography color="#CAF7FF" pl="20px">
+                - Test
+                </Typography>
+                <Typography color="#CAF7FF" pl="20px">
+                - publish
+                </Typography>
+                <Typography color="#CAF7FF" pl="20px">
+                - deploy
+                </Typography>
+                <Typography color="#CAF7FF" pt="20px">
+                Build:
+                </Typography>
+                <Typography color="#CAF7FF" pl="10px">
+                Script:
+                </Typography>
+                <Typography color="#CAF7FF" pl="20px">
+                - ./gradlew Build
+                </Typography>
+                <Typography color="#CAF7FF" pl="10px">
+                artifacts:
+                </Typography>
+                <Typography color="#CAF7FF" pl="20px">
+                paths: build/libs/*.jar
+                </Typography>
+                
+            </Box>
+        </FlexBox>
+
+      </Box>
             <Box sx={{
                 my: 10
             }}>

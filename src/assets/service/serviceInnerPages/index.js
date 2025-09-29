@@ -135,6 +135,7 @@ export { default as aiApproach3 } from './aiApproach3.png';
 export { default as aiApproach4 } from './aiApproach4.png';
 export { default as aiApproach5 } from './aiApproach5.png';
 export { default as aiApproach6 } from './aiApproach6.png';
+export { default as aiWhy } from './aiWhy.webp';
 
 
 
@@ -169,6 +170,10 @@ export { default as devWork5 } from './devWork5.png';
 export { default as devWork6 } from './devWork6.png';
 export { default as devApproachImg } from './devApproachImg.png';
 export { default as devWhyImg } from './devWhyImg.png';
+export { default as devPettern1 } from './devPettern1.png';
+export { default as devPettern2 } from './devPettern2.png';
+export { default as devPettern3 } from './devPettern3.png';
+export { default as devPettern4 } from './devPettern4.png';
 
 
 export { default as mobileOffer1 } from './mobileOffer1.png';
@@ -183,6 +188,27 @@ export { default as mobileApproach3 } from './mobileApproach3.png';
 export { default as mobileApproach4 } from './mobileApproach4.png';
 export { default as mobileApproach5 } from './mobileApproach5.png';
 export { default as mobileApproach6 } from './mobileApproach6.png';
+export { default as mobileAppFirst } from './mobileAppFirst.jpg';
+export { default as mobileAppProcess } from './mobileAppProcess.webp';
+export { default as mobileOutcome1 } from './mobileOutcome1.jpg';
+export { default as mobileOutcome2 } from './mobileOutcome2.jpg';
+export { default as mobileApp1 } from './mobileApp1.png';
+export { default as mobileApp2 } from './mobileApp2.png';
+export { default as mobileApp3 } from './mobileApp3.png';
+export { default as mobileApp4 } from './mobileApp4.png';
+export { default as mobileApp5 } from './mobileApp5.png';
+export { default as mobileApp6 } from './mobileApp6.png';
+export { default as mobileApp7 } from './mobileApp7.png';
+export { default as mobileApp8 } from './mobileApp8.png';
+export { default as mobileApp9 } from './mobileApp9.png';
+export { default as mobileApp10 } from './mobileApp10.png';
+export { default as mobileApp11 } from './mobileApp11.png';
+export { default as mobileApp12 } from './mobileApp12.png';
+export { default as mobileApp13 } from './mobileApp13.png';
+export { default as mobilePatterns1 } from './mobilePatterns1.png';
+export { default as mobilePatterns2 } from './mobilePatterns2.png';
+export { default as mobilePatterns3 } from './mobilePatterns3.png';
+export { default as mobilePatterns4 } from './mobilePatterns4.png';
 
 
 

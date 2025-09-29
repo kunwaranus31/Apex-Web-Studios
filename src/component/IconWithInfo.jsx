@@ -12,6 +12,7 @@ const IconWithInfo = ({
   link,
   textClr,
   fontsize,
+  display,
   hover = true,          // NEW: toggle hover effect (default ON)
 }) => {
   // Build hover styles only when enabled
@@ -32,7 +33,7 @@ const IconWithInfo = ({
     
     <Box
       sx={{
-        display: "flex",
+        display: display || 'flex',
         gap: 2,
         mb: 3,
         p: 2,

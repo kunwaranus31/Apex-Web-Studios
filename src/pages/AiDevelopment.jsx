@@ -2,7 +2,7 @@ import { Box, Button, Divider, Typography } from '@mui/material'
 import React from 'react'
 import { AboutForm, AccordionFaq, BoxBg, FlexBox, HeadingWithSubheading, IconWithInfo, InnerPageHeader, InnerPageTextImage, TechnologyIcons } from '../component'
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { ai1, ai10, ai11, ai12, ai13, ai14, ai15, ai16, ai2, ai3, ai4, ai5, ai6, ai7, ai8, ai9, aiApproach, aiApproach1, aiApproach2, aiApproach3, aiApproach4, aiApproach5, aiApproach6, aiImg, aiOutcome1, aiOutcome2, aiService1, aiService2, aiService3, aiService4, aiService5, aiService6, s7, secondBg, techBg, webFAQ } from '../assets/service/serviceInnerPages';
+import { ai1, ai10, ai11, ai12, ai13, ai14, ai15, ai16, ai2, ai3, ai4, ai5, ai6, ai7, ai8, ai9, aiApproach, aiApproach1, aiApproach2, aiApproach3, aiApproach4, aiApproach5, aiApproach6, aiImg, aiOutcome1, aiOutcome2, aiService1, aiService2, aiService3, aiService4, aiService5, aiService6, aiWhy, s7, secondBg, techBg, webFAQ } from '../assets/service/serviceInnerPages';
 import approachBg from '../assets/service/serviceBg.jpg'
 import { formBg } from '../assets';
 
@@ -96,7 +96,7 @@ const AiDevelopment = () => {
                 <InnerPageTextImage
                     subheading="Why Choose Lodatech"
                     heading="Why Lodatech for AI"
-                    // image={bigDataWhyChoose}
+                    image={aiWhy}
                     imageWidth='550px'
                     contentjustify="space-between"
                     items={[
