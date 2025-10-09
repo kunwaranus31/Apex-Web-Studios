@@ -1,5 +1,6 @@
 // src/components/HomeForm.jsx
 import React from "react";
+import emailjs from '@emailjs/browser';
 import {
   Box,
   TextField,
@@ -53,6 +54,26 @@ export default function HomeForm() {
       resumeFileName: fileName || null,
     };
     console.log("Submit payload:", payload);
+
+    emailjs
+    .sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,   // Use VITE_ prefix for Vite
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,  // Use VITE_ prefix for Vite
+      e.target,                                  // The form data
+      import.meta.env.VITE_EMAILJS_USER_ID      // Use VITE_ prefix for Vite
+    )
+    .then(
+      (result) => {
+        console.log("Email sent successfully:", result.text);
+        alert("Message sent successfully!");
+      },
+      (error) => {
+        console.error("Error sending email:", error.text);
+        alert("There was an error sending the message. Please try again.");
+      }
+      
+    );
+    
   };
 
   return (

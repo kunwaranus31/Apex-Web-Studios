@@ -1,19 +1,27 @@
 import React from "react";
+import emailjs from '@emailjs/browser';
 import {
     Box,
     TextField,
     InputAdornment,
     Button,
-    Typography,
+    Select,
+    MenuItem,
+    FormControl,
+    InputLabel,
 } from "@mui/material";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
-import BusinessIcon from '@mui/icons-material/Business';
+import MessageIcon from '@mui/icons-material/Message';
 
 export default function AboutForm() {
-    const [fileName, setFileName] = React.useState("");
-    const [errors, setErrors] = React.useState({ name: "", email: "" });
+    const [errors, setErrors] = React.useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+    });
+    const [service, setService] = React.useState("");
 
     const fieldSX = {
         mb: 4, // consistent spacing under each field
@@ -24,18 +32,23 @@ export default function AboutForm() {
         "& input::placeholder": { opacity: 1, color: "rgba(0,0,0,0.6)" },
     };
 
-    const validate = (data) => {
-        const name = data.get("name")?.trim() || "";
-        const email = data.get("email")?.trim() || "";
-        const newErrors = { name: "", email: "" };
+    const handleServiceChange = (event) => {
+        setService(event.target.value);
+    };
 
-        if (!name) newErrors.name = "Name is required.";
+    const validate = (data) => {
+        const firstName = data.get("firstName")?.trim() || "";
+        const lastName = data.get("lastName")?.trim() || "";
+        const email = data.get("email")?.trim() || "";
+        const newErrors = { firstName: "", lastName: "", email: "" };
+
+        if (!firstName) newErrors.firstName = "First name is required.";
+        if (!lastName) newErrors.lastName = "Last name is required.";
         if (!email) newErrors.email = "Email is required.";
-        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
-            newErrors.email = "Enter a valid email.";
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) newErrors.email = "Enter a valid email.";
 
         setErrors(newErrors);
-        return !newErrors.name && !newErrors.email;
+        return !newErrors.firstName && !newErrors.lastName && !newErrors.email;
     };
 
     const handleSubmit = (e) => {
@@ -44,13 +57,32 @@ export default function AboutForm() {
         if (!validate(data)) return;
 
         const payload = {
-            name: data.get("name"),
+            firstName: data.get("firstName"),
+            lastName: data.get("lastName"),
             phone: data.get("phone"),
-            company: data.get("company"),
             email: data.get("email"),
-            resumeFileName: fileName || null,
+            service: service || null,
+            message: data.get("message") || null,
         };
         console.log("Submit payload:", payload);
+        emailjs
+        .sendForm(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,   // Use VITE_ prefix for Vite
+          import.meta.env.VITE_EMAILJS_CONTACT_TEMPLATE_ID,  // Use VITE_ prefix for Vite
+          e.target,                                  // The form data
+          import.meta.env.VITE_EMAILJS_USER_ID      // Use VITE_ prefix for Vite
+        )
+        .then(
+          (result) => {
+            console.log("Email sent successfully:", result.text);
+            alert("Message sent successfully!");
+          },
+          (error) => {
+            console.error("Error sending email:", error.text);
+            alert("There was an error sending the message. Please try again.");
+          }
+          
+        );
     };
 
     return (
@@ -72,20 +104,20 @@ export default function AboutForm() {
             <Box
                 sx={{
                     display: "flex",
-                    flexDirection: { xs: "column", md: "row" },
+                    flexDirection: { xs: "column", md: "row" },  // Stack vertically on mobile, side by side on desktop
                     gap: { xs: 3, md: 6 },
                 }}
             >
                 {/* Left column */}
                 <Box sx={{ flex: 1, minWidth: 0 }}>
                     <TextField
-                        name="name"
+                        name="firstName"
                         required
                         fullWidth
                         variant="standard"
-                        placeholder="Name *"
-                        error={!!errors.name}
-                        helperText={errors.name}
+                        placeholder="First Name *"
+                        error={!!errors.firstName}
+                        helperText={errors.firstName}
                         InputProps={{
                             startAdornment: (
                                 <InputAdornment position="start">
@@ -111,8 +143,25 @@ export default function AboutForm() {
                         sx={fieldSX}
                     />
 
-                    {/* Removed Address Field */}
+                    {/* Dropdown for Service */}
+                    <FormControl fullWidth variant="standard" sx={fieldSX}>
+                        <InputLabel>Service</InputLabel>
+                        <Select
+                            name="service"
+                            value={service}
+                            onChange={handleServiceChange}
+                            label="Service"
+                        >
+                            <MenuItem value="Software Development">Software Development</MenuItem>
+                            <MenuItem value="Web Development">Web Development</MenuItem>
+                            <MenuItem value="Big Data Development">Big Data Development</MenuItem>
+                            <MenuItem value="AI / ML Development">AI / ML Development</MenuItem>
+                            <MenuItem value="DevOps & Cloud Engineering">DevOps & Cloud Engineering</MenuItem>
+                            <MenuItem value="Mobile App Development">Mobile App Development</MenuItem>
+                        </Select>
+                    </FormControl>
 
+                    {/* Submit Button for Desktop */}
                     <Box sx={{ display: { xs: "none", md: "block" } }}>
                         <Button
                             type="submit"
@@ -136,6 +185,24 @@ export default function AboutForm() {
                 {/* Right column */}
                 <Box sx={{ flex: 1, minWidth: 0 }}>
                     <TextField
+                        name="lastName"
+                        required
+                        fullWidth
+                        variant="standard"
+                        placeholder="Last Name *"
+                        error={!!errors.lastName}
+                        helperText={errors.lastName}
+                        InputProps={{
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                    <PersonOutlineIcon sx={{ color: "text.secondary" }} />
+                                </InputAdornment>
+                            ),
+                        }}
+                        sx={fieldSX}
+                    />
+
+                    <TextField
                         name="email"
                         required
                         fullWidth
@@ -153,25 +220,24 @@ export default function AboutForm() {
                         sx={fieldSX}
                     />
 
-                    {/* Replaced Upload Resume with Company Name */}
                     <TextField
-                        name="company"
+                        name="message"
                         fullWidth
                         variant="standard"
-                        placeholder="Company Name"
+                        placeholder="Message (optional)"
+                        multiline
+                        rows={2}
                         InputProps={{
                             startAdornment: (
                                 <InputAdornment position="start">
-                                    <BusinessIcon sx={{ color: "text.secondary" }} />
+                                    <MessageIcon sx={{ color: "text.secondary" }} />
                                 </InputAdornment>
                             ),
                         }}
                         sx={fieldSX}
                     />
 
-                    
-
-                    {/* Mobile submit button */}
+                    {/* Submit Button for Mobile */}
                     <Box sx={{ display: { xs: "block", md: "none" }, mt: 4 }}>
                         <Button
                             type="submit"

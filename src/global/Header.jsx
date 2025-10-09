@@ -1,17 +1,6 @@
 import React from "react";
 import {
-  Box,
-  Button,
-  IconButton,
-  Drawer,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-  Menu,
-  MenuItem,
-  Collapse,
-  Typography,
+  Box, Button, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText, Menu, MenuItem, Collapse, Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -24,10 +13,9 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 // Top-level nav (except Services dropdown)
 const navItems = [
   { name: "Home", link: "/" },
-  { name: "About", link: "/about-us" },
+  { name: "About Us", link: "/about-us" },
   // Services handled separately for dropdown
   { name: "Industries", link: "#" },
-  { name: "Resources", link: "#" },
   { name: "Contact", link: "#" },
 ];
 
@@ -99,73 +87,86 @@ const Header = () => {
             </li>
           ))}
 
-          {/* Services: link + separate dropdown trigger (desktop) */}
-          <li style={{ display: "flex", alignItems: "center", gap: 4 }}>
-            {/* Pure link — always navigates */}
-            <Typography
+          {/* Services: Wrapper with unified hover */}
+          <li>
+            <Box
               component={Link}
               to="/services"
-              color="inherit"
-              variant="text"
+              className="services-link"
               sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: 0.5,
+                position: "relative",
                 textDecoration: "none",
-                p: 0,
-                minWidth: 0,
-                textTransform: "none",
+                color: "inherit",
                 fontWeight: 500,
                 fontSize: { md: "0.95rem", lg: "1rem" },
-                lineHeight: 1.2,
-                // "&:hover": { backgroundColor: "transparent" },
-
-
+                opacity: 1,
+                transition: "opacity 0.2s",
+                cursor: "pointer",
+                "&:hover": {
+                  opacity: 0.8,
+                  "& .services-link, & .arrow-icon": {
+                    opacity: 1,
+                  },
+                },
               }}
+              onMouseEnter={handleSvcOpen}
             >
-              Services
-            </Typography>
+              {/* Services link */}
+              <Box
 
-            {/* Arrow only controls the dropdown */}
-            <IconButton
-              size="small"
-              aria-label="Open services menu"
-              aria-haspopup="menu"
-              aria-controls={svcMenuOpen ? "services-menu" : undefined}
-              aria-expanded={svcMenuOpen ? "true" : undefined}
-              onClick={handleSvcOpen}
-              onMouseEnter={handleSvcOpen} // optional: hover-to-open
-              sx={{ p: 0 }}
-            >
+
+                onClick={(e) => {
+                  // Let the Link handle navigation
+                  e.stopPropagation();
+                }}
+              >
+                Services
+              </Box>
+
+              {/* Arrow icon */}
               <KeyboardArrowDownIcon
+                className="arrow-icon"
                 sx={{
                   fontSize: "1.1rem",
-                  transition: "transform 0.3s ease",
+                  opacity: 0.9,
+                  transition: "transform 0.3s ease, opacity 0.2s",
                   transform: svcMenuOpen ? "rotate(180deg)" : "rotate(0deg)",
+                  cursor: "pointer",
                 }}
               />
-            </IconButton>
 
-            {/* Dropdown menu */}
-            <Menu
-              id="services-menu"
-              anchorEl={svcAnchor}
-              open={svcMenuOpen}
-              onClose={handleSvcClose}
-              MenuListProps={{ onMouseLeave: handleSvcClose }}
-              anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-              transformOrigin={{ vertical: "top", horizontal: "left" }}
-              elevation={2}
-            >
-              {servicesItems.map((svc) => (
-                <MenuItem
-                  key={svc.name}
-                  component={Link}
-                  to={svc.link}
-                  onClick={handleSvcClose}
-                  disableRipple
-                >
-                  {svc.name}
-                </MenuItem>
-              ))}
-            </Menu>
+              {/* Dropdown menu */}
+              <Menu
+                id="services-menu"
+                anchorEl={svcAnchor}
+                open={svcMenuOpen}
+                onClose={handleSvcClose}
+                MenuListProps={{ onMouseLeave: handleSvcClose }}
+                anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+                transformOrigin={{ vertical: "top", horizontal: "left" }}
+                elevation={2}
+                sx={{
+                  "& .MuiPaper-root": {
+                    mt: 0.5,
+                  },
+                }}
+              >
+                {servicesItems.map((svc) => (
+                  <MenuItem
+                    key={svc.name}
+                    component={Link}
+                    to={svc.link}
+                    onClick={handleSvcClose}
+                    disableRipple
+                  >
+                    {svc.name}
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
           </li>
 
           {/* Remaining items */}
@@ -182,6 +183,9 @@ const Header = () => {
         <Button
           variant="contained"
           endIcon={<ArrowForwardIcon />}
+          component={Link}
+          to="https://www.google.com/"
+          target="_blank"
           sx={{
             display: { xs: "none", md: "inline-flex" },
             borderRadius: "9999px",
@@ -212,12 +216,12 @@ const Header = () => {
         anchor="right"
         open={open}
         onClose={() => setOpen(false)}
-        ModalProps={{ keepMounted: true }} // better performance on mobile
+        ModalProps={{ keepMounted: true }}
         PaperProps={{
           sx: {
             width: 320,
             maxWidth: "100vw",
-            pt: "env(safe-area-inset-top)", // iOS safe area
+            pt: "env(safe-area-inset-top)",
           },
         }}
       >
@@ -232,7 +236,7 @@ const Header = () => {
               </ListItem>
             ))}
 
-            {/* Services (mobile): left tap navigates, right chevron expands */}
+            {/* Services (mobile) */}
             <ListItem disablePadding>
               <Box sx={{ display: "flex", alignItems: "center", width: "100%" }}>
                 <ListItemButton
@@ -251,7 +255,7 @@ const Header = () => {
                   aria-expanded={mobileSvcOpen ? "true" : "false"}
                   aria-controls="mobile-services-submenu"
                   onClick={(e) => {
-                    e.stopPropagation(); // don't trigger the link
+                    e.stopPropagation();
                     setMobileSvcOpen((v) => !v);
                   }}
                   onKeyDown={(e) => {

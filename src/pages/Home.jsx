@@ -515,7 +515,7 @@ const Home = () => {
                     <HomeForm />
                 </Box>
             </Box>
-            <Box sx={{ pt: 9, pb: 3 }} >
+            {/* <Box sx={{ pt: 9, pb: 3 }} >
                 <Box>
                     <HeadingWithSubheading align="center" subheading="Our Blog" heading="Explore Our Latest Articles and Blog Posts to Stay Informed About Trends," headingWidth="700px" justify="center" />
                 </Box>
@@ -531,7 +531,7 @@ const Home = () => {
                     <Blog blogImage={blogImg2} blogName="A checklist to improve your daily routine" text='Coding' />
                     <Blog blogImage={blogImg1} blogName="That will help you get 1% better every day" text='Technology' />
                 </Box>
-            </Box>
+            </Box> */}
 
         </Box>
     );

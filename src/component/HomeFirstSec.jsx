@@ -111,7 +111,8 @@ const HomeFirstSec = () => {
                                 "&:hover": { bgcolor: "#5e32d6" },
                             }}
                             component={Link}
-                            to="#"
+                            to="https://www.google.com/"
+                            target="_blank"
                             endIcon={
                                 <Box
                                     sx={{
