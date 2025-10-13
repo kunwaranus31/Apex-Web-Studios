@@ -28,8 +28,8 @@ const Footer = () => {
         { label: "Home", href: "/" },
         { label: "About Us", href: "/about-us" },
         { label: "Services", href: "/services" },
-        { label: "Industries", href: "#" },
-        { label: "Contact", href: "#" },
+        { label: "Industries", href: "/industries" },
+        { label: "Contact Us", href: "/contact-us" },
     ];
 
     return (
@@ -138,14 +138,22 @@ const Footer = () => {
                         </Box>
                         <Box component="ul" sx={{ listStyle: "none", p: 0, mt: 3.5, color: "#797979" }}>
                             {pageItems.map(({ label, href }) => (
-                                <Box component="li" key={label} sx={{listStyle: "none", mb: 1.3 }}>
-                                    <Typography 
-                                    to={href} 
-                                    sx={{textDecoration:"none"}} 
-                                    component={Link} 
-                                    underline="none" 
-                                    color="inherit">
-                                        <Typography  variant="body1">{label}</Typography>
+                                <Box component="li" key={label} sx={{ listStyle: "none", mb: 1.3 }}>
+                                    <Typography
+                                        to={href}
+                                        sx={{
+                                            textDecoration: "none",
+                                        }}
+                                        component={Link}
+                                        underline="none"
+                                        color="inherit">
+                                        <Typography variant="body1" sx={{
+                                            transition: "all 0.3s ease",
+                                            "&:hover": {
+                                                fontWeight: 600,
+                                                color: "#7444FD"
+                                            }
+                                        }}>{label}</Typography>
                                     </Typography>
                                 </Box>
                             ))}
@@ -174,13 +182,22 @@ const Footer = () => {
                         <Box component="ul" sx={{ listStyle: "none", p: 0, mt: 3.5, color: "#797979" }}>
                             {items.map(({ label, href }) => (
                                 <Box component="li" key={label} sx={{ mb: 1.3 }}>
-                                    <Typography 
-                                    component={Link} 
-                                    to={href} 
-                                    underline="none" 
-                                    color="inherit"
-                                        sx={{textDecoration:"none"}} >
-                                        <Typography variant="body1">{label}</Typography>
+                                    <Typography
+                                        component={Link}
+                                        to={href}
+                                        underline="none"
+                                        color="inherit"
+                                        sx={{
+                                            textDecoration: "none",
+                                            
+                                        }} >
+                                        <Typography variant="body1" sx={{
+                                            transition: "all 0.3s ease",
+                                            "&:hover": {
+                                                fontWeight: 600,
+                                                color: "#7444FD"
+                                            }
+                                        }}>{label}</Typography>
                                     </Typography>
                                 </Box>
                             ))}
@@ -255,7 +272,7 @@ const Footer = () => {
                                     px: 1,
                                     py: 0.5,
                                     borderRadius: 1,
-                                    textDecoration:"none",
+                                    textDecoration: "none",
                                 }}
                             >
                                 APEX Web Studios.
@@ -266,32 +283,32 @@ const Footer = () => {
                     <Box sx={{ display: "flex", gap: 3 }}>
 
 
-                        <Box 
-                        component={Link}
-                        to="#"
-                        color="inherit"
-                         >
+                        <Box
+                            component={Link}
+                            to="#"
+                            color="inherit"
+                        >
                             <FacebookIcon />
                         </Box>
-                        <Box 
-                        component={Link}
-                        to="#"
-                        color="inherit"
-                         >
+                        <Box
+                            component={Link}
+                            to="#"
+                            color="inherit"
+                        >
                             <TwitterIcon />
                         </Box>
-                        <Box 
-                        component={Link}
-                        to="#"
-                        color="inherit"
-                         >
+                        <Box
+                            component={Link}
+                            to="#"
+                            color="inherit"
+                        >
                             <LinkedInIcon />
                         </Box>
-                        <Box 
-                        component={Link}
-                        to="#"
-                        color="inherit"
-                         >
+                        <Box
+                            component={Link}
+                            to="#"
+                            color="inherit"
+                        >
                             <PinterestIcon />
                         </Box>
                     </Box>

@@ -20,7 +20,14 @@ const LeftIconText = ({ icon, text, textColor }) => {
                 key={i}
                 href={t.href}
                 underline="none"
-                sx={{ color: textColor }}
+                sx={{
+                  color: textColor,
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    fontWeight: 600,
+                    color: "#7444FD"
+                  }
+                }}
               >
                 {t.label}
               </Link>

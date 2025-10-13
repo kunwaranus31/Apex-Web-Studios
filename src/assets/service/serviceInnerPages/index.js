@@ -209,6 +209,7 @@ export { default as mobilePatterns1 } from './mobilePatterns1.png';
 export { default as mobilePatterns2 } from './mobilePatterns2.png';
 export { default as mobilePatterns3 } from './mobilePatterns3.png';
 export { default as mobilePatterns4 } from './mobilePatterns4.png';
+export { default as mobileWhy } from './mobileWhy.webp';
 
 export { default as location } from './location.png';
 export { default as mail } from './mail.png';

@@ -18,6 +18,7 @@ const IconWithInfo = ({
   // Build hover styles only when enabled
   const hoverStyles = hover
     ? {
+      transition: "all 0.4s ease",
         "&:hover": {
           border: "solid",
           borderWidth: "2px",

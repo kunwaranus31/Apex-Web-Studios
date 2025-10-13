@@ -46,6 +46,7 @@ import {
   mobilePatterns2,
   mobilePatterns3,
   mobilePatterns4,
+  mobileWhy,
   s9,
   secondBg,
   techBg,
@@ -161,7 +162,7 @@ const MobileAppDevelopment = () => {
         <InnerPageTextImage
           subheading="Why Choose Lodatech"
           heading="Why Lodatech for mobile"
-          image={webWhychoose}
+          image={mobileWhy}
           imageWidth="550px"
           contentjustify="space-between"
           items={[

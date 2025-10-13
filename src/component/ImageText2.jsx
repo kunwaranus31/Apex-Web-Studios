@@ -51,7 +51,7 @@ const ImageText2 = ({
           height: { xs: "100%", md: "auto" },
           flexShrink: 0,
           // Ensure visible height for absolutely positioned images on mobile
-          aspectRatio: { xs: '16 / 10', md: 'auto' },
+          aspectRatio: { xs: '11/10', md: 'auto' },
           minHeight: { md: "auto" },
         }}>
           {slides.map((src, i) => (

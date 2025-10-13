@@ -119,7 +119,7 @@ const Home = () => {
                     text4="Insurance"
                     text5="Education"
                     btnText="Explore Industry Solution"
-                    btnLink="#"
+                    btnLink="/industries"
                     direction="row-reverse"
                     textImage={[phone1, phone2]}
                     containerWidth="1440px"

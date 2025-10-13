@@ -1,12 +1,22 @@
 import React from "react";
 import {
-  Box, Button, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText, Menu, MenuItem, Collapse, Typography,
+  Box,
+  Button,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Menu,
+  MenuItem,
+  Collapse,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
@@ -14,7 +24,6 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 const navItems = [
   { name: "Home", link: "/" },
   { name: "About Us", link: "/about-us" },
-  // Services handled separately for dropdown
   { name: "Industries", link: "/industries" },
   { name: "Career", link: "/career" },
   { name: "Contact Us", link: "/contact-us" },
@@ -37,6 +46,8 @@ const Header = () => {
 
   // mobile services expand/collapse
   const [mobileSvcOpen, setMobileSvcOpen] = React.useState(false);
+
+  const location = useLocation(); // get current path
 
   const handleSvcOpen = (event) => setSvcAnchor(event.currentTarget);
   const handleSvcClose = () => setSvcAnchor(null);
@@ -75,20 +86,38 @@ const Header = () => {
               fontWeight: 500,
               fontSize: { md: "0.95rem", lg: "1rem" },
               opacity: 0.9,
-              "&:hover": { opacity: 1 },
+              transition: "all 0.3s ease",
+              "&:hover": {
+                opacity: 1,
+                color: "#7444FD",
+                fontWeight: 600,
+              },
+              "& a": {
+                color: "inherit",
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+              },
             },
           }}
         >
-          {/* Home / About */}
+          {/* Top-level items before Services */}
           {navItems.slice(0, 2).map((item) => (
             <li key={item.name}>
-              <Link to={item.link} style={{ textDecoration: "none", color: "inherit" }}>
+              <Link
+                to={item.link}
+                style={{
+                  textDecoration: "none",
+                  color: location.pathname === item.link ? "#7444FD" : "inherit",
+                  fontWeight: location.pathname === item.link ? 600 : 500,
+                  opacity: location.pathname === item.link ? 1 : 0.9,
+                }}
+              >
                 {item.name}
               </Link>
             </li>
           ))}
 
-          {/* Services: Wrapper with unified hover */}
+          {/* Services dropdown */}
           <li>
             <Box
               component={Link}
@@ -100,34 +129,34 @@ const Header = () => {
                 gap: 0.5,
                 position: "relative",
                 textDecoration: "none",
-                color: "inherit",
-                fontWeight: 500,
+                color: location.pathname.startsWith("/software") ||
+                       location.pathname.startsWith("/web") ||
+                       location.pathname.startsWith("/big-data") ||
+                       location.pathname.startsWith("/ai") ||
+                       location.pathname.startsWith("/devops") ||
+                       location.pathname.startsWith("/mobile")
+                         ? "#7444FD"
+                         : "inherit",
+                fontWeight: location.pathname.startsWith("/software") ||
+                           location.pathname.startsWith("/web") ||
+                           location.pathname.startsWith("/big-data") ||
+                           location.pathname.startsWith("/ai") ||
+                           location.pathname.startsWith("/devops") ||
+                           location.pathname.startsWith("/mobile")
+                             ? 600
+                             : 500,
                 fontSize: { md: "0.95rem", lg: "1rem" },
                 opacity: 1,
                 transition: "opacity 0.2s",
                 cursor: "pointer",
                 "&:hover": {
                   opacity: 0.8,
-                  "& .services-link, & .arrow-icon": {
-                    opacity: 1,
-                  },
                 },
               }}
               onMouseEnter={handleSvcOpen}
             >
-              {/* Services link */}
-              <Box
+              <Box onClick={(e) => e.stopPropagation()}>Services</Box>
 
-
-                onClick={(e) => {
-                  // Let the Link handle navigation
-                  e.stopPropagation();
-                }}
-              >
-                Services
-              </Box>
-
-              {/* Arrow icon */}
               <KeyboardArrowDownIcon
                 className="arrow-icon"
                 sx={{
@@ -139,7 +168,6 @@ const Header = () => {
                 }}
               />
 
-              {/* Dropdown menu */}
               <Menu
                 id="services-menu"
                 anchorEl={svcAnchor}
@@ -149,11 +177,7 @@ const Header = () => {
                 anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
                 transformOrigin={{ vertical: "top", horizontal: "left" }}
                 elevation={2}
-                sx={{
-                  "& .MuiPaper-root": {
-                    mt: 0.5,
-                  },
-                }}
+                sx={{ "& .MuiPaper-root": { mt: 0.5 } }}
               >
                 {servicesItems.map((svc) => (
                   <MenuItem
@@ -162,6 +186,10 @@ const Header = () => {
                     to={svc.link}
                     onClick={handleSvcClose}
                     disableRipple
+                    sx={{
+                      color: location.pathname === svc.link ? "#7444FD" : "inherit",
+                      fontWeight: location.pathname === svc.link ? 600 : 500,
+                    }}
                   >
                     {svc.name}
                   </MenuItem>
@@ -170,10 +198,18 @@ const Header = () => {
             </Box>
           </li>
 
-          {/* Remaining items */}
+          {/* Remaining top-level nav items */}
           {navItems.slice(2).map((item) => (
             <li key={item.name}>
-              <Link to={item.link} style={{ textDecoration: "none", color: "inherit" }}>
+              <Link
+                to={item.link}
+                style={{
+                  textDecoration: "none",
+                  color: location.pathname === item.link ? "#7444FD" : "inherit",
+                  fontWeight: location.pathname === item.link ? 600 : 500,
+                  opacity: location.pathname === item.link ? 1 : 0.9,
+                }}
+              >
                 {item.name}
               </Link>
             </li>
@@ -218,20 +254,22 @@ const Header = () => {
         open={open}
         onClose={() => setOpen(false)}
         ModalProps={{ keepMounted: true }}
-        PaperProps={{
-          sx: {
-            width: 320,
-            maxWidth: "100vw",
-            pt: "env(safe-area-inset-top)",
-          },
-        }}
+        PaperProps={{ sx: { width: 320, maxWidth: "100vw", pt: "env(safe-area-inset-top)" } }}
       >
         <Box sx={{ p: 2, pt: 3, display: "flex", flexDirection: "column", gap: 1.5 }}>
           <List>
             {/* Home / About */}
             {navItems.slice(0, 2).map((item) => (
               <ListItem key={item.name} disablePadding>
-                <ListItemButton onClick={() => setOpen(false)} component={Link} to={item.link}>
+                <ListItemButton
+                  onClick={() => setOpen(false)}
+                  component={Link}
+                  to={item.link}
+                  sx={{
+                    color: location.pathname === item.link ? "#7444FD" : "inherit",
+                    fontWeight: location.pathname === item.link ? 600 : 500,
+                  }}
+                >
                   <ListItemText primary={item.name} />
                 </ListItemButton>
               </ListItem>
@@ -245,7 +283,28 @@ const Header = () => {
                   component={Link}
                   to="/services"
                   aria-label="Go to Services page"
-                  sx={{ flex: 1, pr: 1.5 }}
+                  sx={{
+                    flex: 1,
+                    pr: 1.5,
+                    color:
+                      location.pathname.startsWith("/software") ||
+                      location.pathname.startsWith("/web") ||
+                      location.pathname.startsWith("/big-data") ||
+                      location.pathname.startsWith("/ai") ||
+                      location.pathname.startsWith("/devops") ||
+                      location.pathname.startsWith("/mobile")
+                        ? "#7444FD"
+                        : "inherit",
+                    fontWeight:
+                      location.pathname.startsWith("/software") ||
+                      location.pathname.startsWith("/web") ||
+                      location.pathname.startsWith("/big-data") ||
+                      location.pathname.startsWith("/ai") ||
+                      location.pathname.startsWith("/devops") ||
+                      location.pathname.startsWith("/mobile")
+                        ? 600
+                        : 500,
+                  }}
                 >
                   <ListItemText primary="Services" />
                 </ListItemButton>
@@ -274,16 +333,15 @@ const Header = () => {
             </ListItem>
 
             <Collapse in={mobileSvcOpen} timeout="auto" unmountOnExit>
-              <List
-                component="div"
-                disablePadding
-                id="mobile-services-submenu"
-                aria-label="Services submenu"
-              >
+              <List component="div" disablePadding id="mobile-services-submenu" aria-label="Services submenu">
                 {servicesItems.map((svc) => (
                   <ListItem key={svc.name} disablePadding>
                     <ListItemButton
-                      sx={{ pl: 4 }}
+                      sx={{
+                        pl: 4,
+                        color: location.pathname === svc.link ? "#7444FD" : "inherit",
+                        fontWeight: location.pathname === svc.link ? 600 : 500,
+                      }}
                       onClick={() => setOpen(false)}
                       component={Link}
                       to={svc.link}
@@ -298,7 +356,15 @@ const Header = () => {
             {/* Remaining items */}
             {navItems.slice(2).map((item) => (
               <ListItem key={item.name} disablePadding>
-                <ListItemButton onClick={() => setOpen(false)} component={Link} to={item.link}>
+                <ListItemButton
+                  onClick={() => setOpen(false)}
+                  component={Link}
+                  to={item.link}
+                  sx={{
+                    color: location.pathname === item.link ? "#7444FD" : "inherit",
+                    fontWeight: location.pathname === item.link ? 600 : 500,
+                  }}
+                >
                   <ListItemText primary={item.name} />
                 </ListItemButton>
               </ListItem>
