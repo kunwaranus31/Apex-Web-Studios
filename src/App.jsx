@@ -11,6 +11,9 @@ import BigDataDevelopment from './pages/BigDataDevelopment'
 import AiDevelopment from './pages/AiDevelopment'
 import MobileAppDevelopment from './pages/MobileAppDevelopment'
 import DevopsCloud from './pages/DevopsCloud'
+import ContactUs from './pages/ContactUs'
+import Career from './pages/Career'
+import Industries from './pages/Industries'
 
 const App = () => {
   return (
@@ -26,6 +29,9 @@ const App = () => {
         <Route path="ai-development" element={<AiDevelopment/> } />
         <Route path="devops" element={ <DevopsCloud/> } />
         <Route path="mobile-app-development" element={ <MobileAppDevelopment/> } />
+        <Route path="contact-us" element={ <ContactUs/> } />
+        <Route path="career" element={ <Career/> } />
+        <Route path="industries" element={ <Industries/> } />
 
       </Routes>
       <Footer />

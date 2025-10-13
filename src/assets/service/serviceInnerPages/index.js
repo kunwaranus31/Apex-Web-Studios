@@ -210,7 +210,24 @@ export { default as mobilePatterns2 } from './mobilePatterns2.png';
 export { default as mobilePatterns3 } from './mobilePatterns3.png';
 export { default as mobilePatterns4 } from './mobilePatterns4.png';
 
+export { default as location } from './location.png';
+export { default as mail } from './mail.png';
+export { default as phone } from './phone.png';
 
+export { default as careerFirst } from './careerFirst.webp';
+export { default as career2 } from './career2.png';
+export { default as careerWhy1 } from './careerWhy1.png';
+export { default as careerWhy2 } from './careerWhy2.png';
+export { default as careerWhy3 } from './careerWhy3.png';
+export { default as careerWhy4 } from './careerWhy4.png';
+export { default as careerWhy5 } from './careerWhy5.png';
+export { default as careerLife } from './careerLife.webp';
+
+export { default as industriesFirst } from './industriesFirst.webp';
+export { default as industries2 } from './industries2.webp';
+export { default as industries3 } from './industries3.webp';
+export { default as industries4 } from './industries4.webp';
+export { default as industries5} from './industries5.webp';
 
 export {
   firstImg,

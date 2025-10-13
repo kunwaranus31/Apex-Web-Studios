@@ -9,6 +9,7 @@ let theme = createTheme({
       fontWeight: 700,
       lineHeight: 1.2,
       letterSpacing: "-0.02em",
+      textTransform:"capitalize",
     },
     h2: {
       fontSize: "2.25rem",

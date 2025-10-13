@@ -15,8 +15,9 @@ const navItems = [
   { name: "Home", link: "/" },
   { name: "About Us", link: "/about-us" },
   // Services handled separately for dropdown
-  { name: "Industries", link: "#" },
-  { name: "Contact", link: "#" },
+  { name: "Industries", link: "/industries" },
+  { name: "Career", link: "/career" },
+  { name: "Contact Us", link: "/contact-us" },
 ];
 
 // Services submenu items
